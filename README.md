@@ -1,23 +1,23 @@
-# TÍTULO DO PROJETO
+# Ajuda Ai!
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Eixo 4 - Projeto: Desenvolvimento de uma Aplicação Distribuída - Turma 04 - 2023/2`
 
-`SEMESTRE`
+`QUARTO SEMESTRE`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
 * Marcus Vinicius Marinho Ferreira
-* Nome completo do aluno 2
+* Amanda Eufrasio Cacholi
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 
 ## Orientador
 
-* Nome completo do professor 1
+* Pedro Alves de Oliveira
 
 ## Instruções de utilização
 
