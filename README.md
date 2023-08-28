@@ -1,4 +1,4 @@
-# Ajuda Ai!
+# Ajuda Aí!
 
 `Análise e Desenvolvimento de Sistemas`
 
