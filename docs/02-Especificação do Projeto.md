@@ -33,7 +33,7 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 | Maria Alves       | Precisar um local de para divulgar seu trabalho de forma eficaz | Ter um lugar que serve como vitrine para todo seu talento. |
 | Pedro Carvalho    | Cuidar bem da sua casa conseguindo contato com pessoas de serviço de qualidade                     | Ter acesso à profissionais que oferecem soluções rápidas e eficientes para necessidades do dia a dia.                     |
 | Carolina Costa    | Ter a chance e acessibilidade de começar seus projetos                                 | Ter acesso à profissionais sem gastar muito                   |
-| Rafael Ferreira  | Contratar profissionias de forma bem pratica e sem limitações                               | Ter acesso a profissionias durante as suas viagens    |
+| Rafael Ferreira  | Contratar profissionais de forma bem pratica e sem limitações                               | Ter acesso a profissionias durante as suas viagens    |
 
 ## Modelagem do Processo de Negócio 
 
