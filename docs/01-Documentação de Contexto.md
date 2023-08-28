@@ -1,46 +1,47 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Bem-vindo ao `Ajuda Aí!`, uma plataforma revolucionária que traz praticidade e eficiência para a busca e contratação de serviços autônomos. Com nossa aplicação mobile e plataforma web, você está a um toque de distância de uma ampla gama de profissionais talentosos e experientes, prontos para atender às suas necessidades específicas.
+
+Imagine ter a liberdade de encontrar exatamente o profissional que você procura, seja para pequenas tarefas domésticas, projetos criativos ou soluções empresariais. Nosso projeto conecta habilidades diversificadas de autônomos apaixonados por seu ofício, proporcionando a você não apenas a expertise desejada, mas também a comodidade de marcar agendamentos e estabelecer contato direto em um único ambiente intuitivo.
+
+Com a nossa plataforma, aspiramos a transformar a maneira como você encontra e interage com profissionais autônomos. Ao unir a praticidade da tecnologia digital com a autenticidade e o talento humano, estamos criando uma comunidade vibrante onde as aspirações de autônomos e clientes se encontram de forma harmoniosa. Prepare-se para experimentar uma nova abordagem na contratação de serviços, onde a excelência e a comodidade se encontram em uma jornada única e inovadora. Bem-vindo ao futuro da contratação de serviços – bem-vindo ao `Ajuda Aí!`.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+De acordo com o IBGE, o Brasil possui 25,7 milhões de trabalhadores autônomos, esse número recorde foi uma consequência da pandemia. Com o aumento do desemprego agravado pelo fechamento de empresas e instabilidade econômicas, as pessoas precisaram buscar uma forma para se manter.
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+Muitos que começaram no trabalho autônomo têm desempenhado atividades de menor ganho e proteção social. De acordo com um estudo do Dieese, o rendimento dessas pessoas, em média R$ 1.434, no período de 2020 à 2022, correspondia à 69,1% dos rendimentos de quem já trabalhava dessa forma, R$ 2.074. A remuneração é baixa e dificulta a contribuição à previdência, e são ocupações de baixa qualificação.
 
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+https://www.brasildefato.com.br/2022/05/13/novos-trabalhadores-autonomos-ganham-30-menos-do-que-os-que-ja-estavam-no-mercado
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
-
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+O Ajuda Aí é uma plataforma que busca conectar os trabalhadores à pessoas que procuram pessoas prestadoras de serviços de que necessitam, com a intenção de ajudar esses trabalhadores com qualificações mais baixas à aumentar suas renda.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+De acordo com um estudo feito pela FGV com dados do IBGE, desde 2020, 1,3 milhão de pessoas passaram a ter um CNJP, esse trabalhadores se concentram nos serviços de vendedores, serviços pessoais e cuidados pessoais e 30,9% com ensino superior, que na maior parte são profissionais das ciências intelectuais.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Já os trabalhadores sem CNPJ compõem a parcela de 18,2 milhões de brasileiros, esse número corresponde a 75% dos trabalhadores autônomos e 48% de todos os informais. Esses trabalhadores estão em posições de baixo valor agregado, 23%,3% deles são agricultores e trabalhadores qualificados da agropecuária, 17,9% são trabalhadores e operários da construção civil e 14,2% são vendedores.
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+https://www.plural.jor.br/noticias/negocios/no-brasil-75-dos-trabalhadores-autonomos-nao-possuem-cnpj/
+
+https://g1.globo.com/jornal-nacional/noticia/2022/06/04/numero-de-trabalhadores-autonomos-bate-recorde-no-inicio-de-2022-mas-renda-cai.ghtml
+
+https://brasil61.com/n/numero-de-trabalhadores-autonomos-atinge-recorde-e-chega-a-25-7-milhoes-no-brasil-bras227321
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+`Profissionais Autônomos`: Trabalhadores independentes que desejam oferecer seus serviços, sejam eles designers, programadores, encanadores, eletricistas, artistas, redatores, entre outros. Eles podem utilizar a plataforma para ampliar sua visibilidade, alcançar novos clientes e gerenciar seus agendamentos de forma eficiente.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+`Clientes em Busca de Serviços`: Indivíduos ou empresas que estão buscando contratar profissionais para realizar tarefas ou projetos específicos. Isso inclui pessoas que precisam de serviços domésticos, reparos, consultoria, criação de conteúdo, design gráfico, entre outros.
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+`Empreendedores e Startups`: Pequenos empreendedores e startups que necessitam de serviços especializados, mas podem não ter recursos para contratar funcionários em tempo integral. Eles podem recorrer à plataforma para encontrar profissionais autônomos que atendam às suas necessidades.
+
+`Pessoas com Habilidades Diversificadas`: Indivíduos que possuem habilidades ou talentos específicos e desejam monetizá-los, como ensino particular, serviços de maquiagem, consultoria de estilo, etc.
+
+`Pessoas em Movimento`: Pessoas que estão em um local temporário, seja em viagens de negócios ou férias, e precisam de serviços locais temporários.
+
+`Pessoas em Busca de Flexibilidade`: Aquelas que preferem terceirizar tarefas específicas em vez de realizar tudo por conta própria, valorizando a flexibilidade que os trabalhadores autônomos podem oferecer.
+
+O projeto pode se adaptar às necessidades e interesses desse público-alvo diversificado, oferecendo funcionalidades e ferramentas que atendam a cada grupo de maneira eficaz, como categorização de serviços, sistema de avaliações, filtro de localização e opções de agendamento.
