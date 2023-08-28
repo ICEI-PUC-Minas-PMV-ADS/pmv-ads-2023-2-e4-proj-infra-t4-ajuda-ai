@@ -6,14 +6,15 @@
 
 `QUARTO SEMESTRE`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto consiste em uma plataforma integrada, disponível como aplicativo mobile e também através de um site, que visa conectar trabalhadores autônomos a potenciais clientes de maneira eficiente e conveniente. Na plataforma, os trabalhadores autônomos podem criar perfis detalhados, destacando suas habilidades, experiência, portfólio e avaliações de clientes anteriores. Os usuários interessados em contratar serviços podem explorar uma variedade de categorias, como design, serviços de casa, tecnologia, entre outros, e visualizar listas de profissionais correspondentes. Através de filtros e pesquisas, eles podem encontrar o profissional adequado com base em localização, avaliações e preços. Além disso, a plataforma oferece recursos de agendamento, permitindo que os clientes marquem compromissos diretamente pelo aplicativo ou site, bem como um sistema de mensagens para facilitar a comunicação entre as partes. Isso proporciona uma solução centralizada para as necessidades de busca, agendamento e contato com trabalhadores autônomos, tornando a contratação de serviços uma experiência mais eficaz e prática para ambos os lados.
 
 ## Integrantes
 
 * Marcus Vinicius Marinho Ferreira
 * Amanda Eufrasio Cacholi
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Daniel de Oliveira Marcelino
+* Luiz Fernando Ribeiro Ferreira
+* Patrick Douglas dos Santos
 
 ## Orientador
 
