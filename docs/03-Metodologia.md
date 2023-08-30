@@ -35,14 +35,17 @@ Exemplo: feature: criar formulário de cadastro
 
 ### Divisão de Papéis
 
-- Scrum Master: Marcus Vinicius Marinho Ferreira
-- Product Owner: Amanda Eufrasio Cacholi
+- Tech Lead: `Marcus Vinicius Marinho Ferreira`
+- Scrum Master: `Marcus Vinicius Marinho Ferreira`
+- Product Owner: `Amanda Eufrasio Cacholi`
 - Equipe de Desenvolvimento
-  - Amanda Cacholi
-  - Marcus Ferreira
+  - Amanda Eufrasio Cacholi
+  - Marcus Vinicius Marinho Ferreira
   - Daniel de Oliveira Marcelino
   - Luiz Fernando Ribeiro Ferreira
   - Patrick Douglas dos Santos
+
+  <br/>
 - Equipe de design:
 
   - Amanda Eufrasio Cacholi
@@ -57,6 +60,7 @@ As ferramentas empregadas no projeto são:
 
 - Editor de código:
   - VSCode
+  - IntellJ
 - Ferramentas de comunicação:
   - WhatsApp
   - Teams
