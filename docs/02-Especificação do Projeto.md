@@ -1,44 +1,39 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+<span style="color:red">Pré-requisitos: <a href="01-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+Maria Alves - 27 anos.
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+- Profissional Autônoma de Design Gráfico.
+- Maria é uma designer gráfica talentosa, mas ainda está construindo sua carreira como autônoma. Com isso usa a plataforma `Ajuda Aí!` para expandir sua base de clientes e mostrar seu portfólio incrível.  
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+Pedro Carvalho - 35 anos.
+
+- Cliente em Busca de Reparos Domésticos.
+- Pedro é um pai de família ocupado que recentemente comprou sua primeira casa. Ele precisa de um eletricista confiável para resolver um problema de fiação. Usando `Ajuda Aí!`, Pedro pode navegar pela categoria de serviços domésticos e encontrar eletricistas qualificados em sua área. 
+
+Carolina Costa - 24 anos.
+
+- Empreendedora Iniciante.
+- Carolina está lançando uma startup de moda sustentável e precisa de um fotógrafo para tirar fotos de seus produtos. Como ela está no início, o orçamento é apertado. Carolina encontra a solução perfeita em `Ajuda aí!`, onde fotógrafos autônomos oferecem pacotes acessíveis. 
+
+Rafael Ferreira - 40 anos.
+
+- Viajante Precisando de Serviços Temporários.
+- Em sua última parada, ele percebeu que seu laptop precisava de reparos urgentes. Usando `Ajuda Aí!`, Rafael encontra técnicos de informática disponíveis em sua localização atual. 
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+Com base na análise das personas foram identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+| `PERSONA`         | `FUNCIONALIDADE`                                                                    | `MOTIVO/VALOR`                                                                                                     |
+| ----------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Maria Alves       | Precisar um local de para divulgar seu trabalho de forma eficaz | Ter um lugar que serve como vitrine para todo seu talento. |
+| Pedro Carvalho    | Cuidar bem da sua casa conseguindo contato com pessoas de serviço de qualidade                     | Ter acesso à profissionais que oferecem soluções rápidas e eficientes para necessidades do dia a dia.                     |
+| Carolina Costa    | Ter a chance e acessibilidade de começar seus projetos                                 | Ter acesso à profissionais sem gastar muito                   |
+| Rafael Ferreira  | Contratar profissionais de forma bem pratica e sem limitações                               | Ter acesso a profissionias durante as suas viagens    |
 
 ## Modelagem do Processo de Negócio 
 
