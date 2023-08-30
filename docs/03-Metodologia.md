@@ -1,6 +1,8 @@
 # Metodologia
 
-A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento.
+## Relação de Ambientes de Trabalho
+
+A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento em ambiente remoto.
 
 ## Controle de Versão
 
@@ -32,6 +34,8 @@ Os commits e as pull requests deverão seguir o seguinte padrão:
 - fix: nome do bug corrigido
 
 Exemplo: feature: criar formulário de cadastro
+
+## Gerenciamento de Projeto
 
 ### Divisão de Papéis
 
