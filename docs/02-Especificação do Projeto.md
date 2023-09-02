@@ -39,13 +39,35 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+O setor enfrenta desafios significativos relacionados à busca eficiente de clientes por parte dos autônomos. Esses problemas incluem:
+
+Falta de visibilidade: Muitos autônomos não têm uma plataforma centralizada para se apresentar aos potenciais clientes, o que resulta em uma falta de visibilidade e dificuldade em se destacar no mercado.
+
+Desperdício de tempo: Autônomos frequentemente gastam tempo precioso procurando ativamente clientes, seja por meio de anúncios locais, redes sociais ou outros métodos, o que pode ser ineficiente e cansativo.
+
+Falta de confiabilidade: Os clientes também podem enfrentar dificuldades em encontrar autônomos confiáveis e qualificados para os serviços que necessitam, uma vez que não há uma fonte centralizada de informações sobre esses profissionais.
+
+Comunicação ineficaz: A comunicação entre autônomos e clientes muitas vezes ocorre de maneira ineficiente, tornando difícil a coordenação de horários e detalhes dos serviços a serem prestados.
+
+Acesso limitado à tecnologia: Alguns autônomos podem não estar familiarizados com ferramentas tecnológicas que poderiam ajudá-los a encontrar clientes de forma mais eficaz.
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+Uma solução para os desafios enfrentados pelos autônomos é a criação de uma plataforma digital de correspondência entre autônomos e clientes. 
 
-### Processo 1 – NOME DO PROCESSO
+Essa iniciativa visa melhorar significativamente a experiência de ambas as partes envolvidas, contribuindo para o desenvolvimento econômico e aprimorando a eficiência do mercado de trabalho autônomo.
+
+A plataforma digital proposta funcionaria como um intermediário eficiente, reunindo autônomos de diferentes áreas, como serviços de reparo, construção, consultoria, transporte, design, entre outros, e os clientes que necessitam desses serviços. Os principais componentes e benefícios da proposta incluem:
+
+Conexão Eficiente: A plataforma oferecerá uma interface fácil de usar, onde autônomos podem se cadastrar e criar perfis detalhados com suas habilidades, experiência e disponibilidade. Os clientes, por sua vez, podem procurar profissionais com base em suas necessidades específicas, como localização, tipo de serviço e orçamento.
+
+Transparência e Confiança: A plataforma promoverá a transparência ao exibir avaliações e comentários de clientes anteriores sobre os serviços prestados pelos autônomos. Isso ajuda os clientes a tomar decisões informadas e permite que os autônomos construam uma reputação sólida.
+
+Desenvolvimento da Comunidade: A proposta não apenas beneficia os autônomos e os clientes, mas também contribui para o crescimento econômico da região, incentivando a contratação local e fortalecendo a economia local.
+
+Impacto Social Positivo: Ao criar uma rede mais eficiente e confiável de autônomos e clientes, a plataforma pode contribuir para a redução do desemprego e subemprego na região, bem como aumentar a qualidade dos serviços disponíveis para a comunidade.
+
+### Processo 1 – Fluxo da aplicação
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
 
