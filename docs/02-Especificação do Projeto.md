@@ -104,6 +104,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-007| Disponibilizar filtros de pesquisa oportunidade serviço                               | MÉDIA | 
 |RF-008| Permitir a comunicação entre o cliente e o autônomo                                   | MÉDIA |  
 |RF-009| Garantir a segurança dos dados do autônomos e usuários                                | ALTA  | 
+
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
@@ -134,31 +135,27 @@ todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
-O projeto está restrito pelos itens apresentados na tabela a seguir.
+Restrições são limitações, condições ou restrições impostas a um sistema, processo, projeto ou atividade para controlar, direcionar ou definir seus parâmetros de funcionamento. 
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+Elas desempenham um papel importante na gestão de projetos e no funcionamento eficiente de sistemas e organizações, uma vez que ajudam a definir limites, garantir conformidade e mitigar riscos. 
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
+É essencial considerar e gerenciar adequadamente as restrições ao planejar e executar qualquer projeto ou atividade.
 
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+Elas são comuns em várias áreas e contextos, incluindo:
+•	Segurança de Dados
+•	Privacidade dos Usuários
+•	Avaliação de Fornecedores de Serviços
+•	Avaliações de Usuários
+•	Segurança Cibernética
+•	Responsabilidade Civil
 
 ## Diagrama de Casos de Uso
 
 O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Casos de Uso”.
+![Diagrama ER](img/DiagramaER.png)
 
-> **Links Úteis**:
-> - [Criando Casos de Uso](https://www.ibm.com/docs/pt-br/elm/6.0?topic=requirements-creating-use-cases)
-> - [Como Criar Diagrama de Caso de Uso: Tutorial Passo a Passo](https://gitmind.com/pt/fazer-diagrama-de-caso-uso.html/)
-> - [Lucidchart](https://www.lucidchart.com/)
-> - [Astah](https://astah.net/)
-> - [Diagrams](https://app.diagrams.net/)
+As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Casos de Uso”.
 
 # Matriz de Rastreabilidade
 
