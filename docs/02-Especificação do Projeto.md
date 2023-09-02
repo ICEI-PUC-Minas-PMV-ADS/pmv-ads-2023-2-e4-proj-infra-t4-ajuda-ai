@@ -87,21 +87,35 @@ Esses indicadores de desempenho fornecerão insights valiosos sobre a eficácia 
 
 ## Requisitos
 
+Os requisitos funcionais são uma parte essencial do processo de desenvolvimento de qualquer sistema ou plataforma, assim como os requisitos não funcionais são igualmente importantes para o sucesso de um projeto de desenvolvimento de software, pois se concentram em aspectos que não estão diretamente relacionados às funcionalidades, mas que impactam a qualidade, desempenho e usabilidade do sistema.
+
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
-
+|ID    | Descrição do Requisito   | Prioridade |
+|------|---------------------------------------------------------------------------------------|-------|
+|RF-001| Os autônomos devem poder criar contas com informações de perfil.                      | ALTA  | 
+|RF-002| Os usuários devem poder criar contas com informações de perfil.                       | ALTA  | 
+|RF-003| O sistema deve validar informações de registro, como e-mail ou número de telefone.    | ALTA  | 
+|RF-004| Os autônomos devem poder criar e editar perfis                                        | ALTA  | 
+|RF-005| Os usuários devem poder criar e editar perfis                                         | ALTA  |
+|RF-006| Disponibilizar filtros de pesquisa serviço                                            | MÉDIA | 
+|RF-007| Disponibilizar filtros de pesquisa oportunidade serviço                               | MÉDIA | 
+|RF-008| Permitir a comunicação entre o cliente e o autônomo                                   | MÉDIA |  
+|RF-009| Garantir a segurança dos dados do autônomos e usuários                                | ALTA  | 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| A plataforma deve ser responsiva e rápida, com tempos de carregamento de página curtos          | MÉDIA | 
+|RNF-002| A plataforma deve ser escalável e acomodar um alto no número de usuários e dados                | BAIXA | 
+|RNF-003| Deve garantir segurança dos dados,sejam protegidos por medidas de segurança robusta             | MÉDIA | 
+|RNF-004| A plataforma deve ter planos de contingência para lidar com interrupções não planejadas         | BAIXA | 
+|RNF-005| O sistema deve ser confiável, com um baixo índice de erros e falhas                             | MÉDIA | 
+|RNF-006| O sistema deve cumprir regulamentações e normas legais relevantes                               | BAIXA | 
+
+
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
