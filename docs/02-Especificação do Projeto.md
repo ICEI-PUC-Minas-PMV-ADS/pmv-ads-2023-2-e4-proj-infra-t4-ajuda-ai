@@ -81,6 +81,10 @@ Usar o seguinte modelo:
 
 ![Indicadores de Desempenho](img/indicadorDesempenho.png)
 
+Esses indicadores de desempenho fornecerão insights valiosos sobre a eficácia da plataforma e ajudarão a identificar áreas que precisam de ajustes ou melhorias ao longo do tempo. 
+
+É importante monitorar esses KPIs continuamente para garantir que o projeto atenda às expectativas e objetivos estabelecidos.
+
 ## Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
