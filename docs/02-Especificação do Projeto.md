@@ -116,23 +116,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-005| O sistema deve ser confiável, com um baixo índice de erros e falhas                             | MÉDIA | 
 |RNF-006| O sistema deve cumprir regulamentações e normas legais relevantes                               | BAIXA | 
 
-
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-
 ## Restrições
 
 Restrições são limitações, condições ou restrições impostas a um sistema, processo, projeto ou atividade para controlar, direcionar ou definir seus parâmetros de funcionamento. 
@@ -155,21 +138,20 @@ O diagrama de casos de uso é o próximo passo após a elicitação de requisito
 
 ![Diagrama ER](img/DiagramaER.png)
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Casos de Uso”.
-
 # Matriz de Rastreabilidade
 
-A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualização dos relacionamento entre requisitos e outros artefatos ou objetos, permitindo a rastreabilidade entre os requisitos e os objetivos de negócio. 
+A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualização do relacionamento entre requisitos e outros projetos ou objetos, permitindo a rastreabilidade entre os requisitos e os objetivos de negócio.
 
 A matriz deve contemplar todos os elementos relevantes que fazem parte do sistema, conforme a figura meramente ilustrativa apresentada a seguir.
 
-![Exemplo de matriz de rastreabilidade](img/02-matriz-rastreabilidade.png)
-
-> **Links Úteis**:
-> - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
-> - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
-> - [IBM Engineering Lifecycle Optimization – Publishing](https://www.ibm.com/br-pt/products/engineering-lifecycle-optimization/publishing/)
-
+|ID do requesito    | Descrição do Requisito  |Casos de Uso Afetados |Testes Afetados  | Componentes de Software Afetados |
+|-------------------|-------------------------|----------------------|-----------------|----------------------------------|
+|REQ-001| O sistema deve permitir o login do usuário                     | |RF001 |Módulo Autenticação               | 
+|REQ-002| O sistema deve permitir que o usuário crie um perfil           | |RF002 |Módulo de Gerenciamento de Perfil | 
+|REQ-003| O sistema deve ser compatível com dispositivos móveis          | |RF008 | -                                | 
+|REQ-004| O sistema deve fornecer segurança cibernética                  | |RF006 |Módulo segurança e ESG            | 
+|REQ-005| O sistema deve armazenar dados de usuário em um banco de dados | |RF008 |Módulo de Banco de Dados          | 
+|REQ-006| O sistema deve ser seguro contra ataques de força bruta        | |RF005 |Módulo de Segurança               | 
 
 # Gerenciamento de Projeto
 
