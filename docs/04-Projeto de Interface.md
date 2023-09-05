@@ -46,7 +46,7 @@ Aqui, os usuários encontram uma visão geral dos serviços disponíveis, recome
 
 ![Tela Inicial](img/Home.png)
 
-#### Tela de Editar Dados do Usuário:
+#### Tela de Editar Dados dos Usuários:
 
 Nesta tela, os usuários têm a capacidade de revisar e atualizar suas informações de perfil. Isso inclui a adição ou modificação de detalhes pessoais, preferências e informações profissionais para prestadores de serviços.
 
