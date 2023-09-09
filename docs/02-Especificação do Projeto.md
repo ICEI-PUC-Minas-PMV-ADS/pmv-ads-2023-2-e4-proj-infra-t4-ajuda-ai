@@ -166,9 +166,10 @@ Amanda Eufrasio Cacholi
 
 Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
 
-![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
+![Diagrama de rede simplificado notação francesa (método francês)] ![Captura de tela 2023-09-08 222149](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-ajuda-ai/assets/93995106/d93be8ac-3aa6-4623-bdf4-00191773715e)
 
-O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
+
+
 
 ![Gráfico de Gantt](img/02-grafico-gantt.png)
 
@@ -178,7 +179,8 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 ![Simple Project Timeline](img/02-project-timeline.png)
 
-## Gestão de Orçamento
+## Gestão de Orçamento![Uploading Captura de tela 2023-09-08 222149.png…]()
+
 
 
 ![Recursos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-ajuda-ai/assets/93995106/1c399ba4-2937-455a-9711-147b8d6baee1)
