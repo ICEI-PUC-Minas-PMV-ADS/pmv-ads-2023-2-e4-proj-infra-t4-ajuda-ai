@@ -134,6 +134,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 | REQ-005         | O sistema deve armazenar dados de usuário em um banco de dados |                       | RF008           | Módulo de Banco de Dados          |
 | REQ-006         | O sistema deve ser seguro contra ataques de força bruta        |                       | RF005           | Módulo de Segurança               |
 
+![Indicadores de Desempenho](img/matriz_de_rastreabilidade.png)
+
 # Gerenciamento de Projeto
 
 Divisão de Papéis
