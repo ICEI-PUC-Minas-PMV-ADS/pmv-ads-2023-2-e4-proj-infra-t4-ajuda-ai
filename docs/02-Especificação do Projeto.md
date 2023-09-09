@@ -178,8 +178,6 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 
 ## Gestão de Orçamento
-![Uploading Captura de tela 2023-09-08 222149.png…]()
-
 
 
 ![Recursos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-ajuda-ai/assets/93995106/1c399ba4-2937-455a-9711-147b8d6baee1)
