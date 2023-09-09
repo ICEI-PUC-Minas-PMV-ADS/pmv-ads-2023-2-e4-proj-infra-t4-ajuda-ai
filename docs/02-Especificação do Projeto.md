@@ -166,12 +166,9 @@ Amanda Eufrasio Cacholi
 
 Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
 
-![Diagrama de rede simplificado notação francesa (método francês)] ![Captura de tela 2023-09-08 222149]
 
+![Captura de tela 2023-09-08 222149](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-ajuda-ai/assets/93995106/e4ff30ef-4675-498c-8385-acb80a5e9956)
 
-
-
-![Gráfico de Gantt](img/02-grafico-gantt.png)
 
 ## Gerenciamento de Equipe
 
