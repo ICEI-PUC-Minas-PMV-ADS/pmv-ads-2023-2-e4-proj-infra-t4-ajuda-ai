@@ -47,7 +47,7 @@ Exemplo: feature: criar formulário de cadastro
   - Marcus Vinicius Marinho Ferreira
   - Daniel de Oliveira Marcelino
   - Luiz Fernando Ribeiro Ferreira
-  - Patrick Douglas dos Santos
+  - Patri ck Douglas dos Santos
 
   <br/>
 - Equipe de design:
