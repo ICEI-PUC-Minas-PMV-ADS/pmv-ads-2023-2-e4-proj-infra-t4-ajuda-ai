@@ -43,13 +43,15 @@ Exemplo: feature: criar formulário de cadastro
 - Scrum Master: `Marcus Vinicius Marinho Ferreira`
 - Product Owner: `Amanda Eufrasio Cacholi`
 - Equipe de Desenvolvimento
+
   - Amanda Eufrasio Cacholi
   - Marcus Vinicius Marinho Ferreira
   - Daniel de Oliveira Marcelino
   - Luiz Fernando Ribeiro Ferreira
-  - Patri ck Douglas dos Santos
+  - Patrick Douglas dos Santos
 
   <br/>
+
 - Equipe de design:
 
   - Amanda Eufrasio Cacholi
