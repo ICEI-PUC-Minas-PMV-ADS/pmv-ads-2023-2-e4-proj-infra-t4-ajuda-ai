@@ -1,0 +1,36 @@
+POST http://localhost:3000/api/autonomo
+Content-Type: application/json
+
+{
+    "nome": "Lindalva Albuquerque",
+    "dataDeNacimento": "1966-04-04",
+    "cpf": "12345678912",
+    "foto": "https://i.pinimg.com/736x/95/6c/21/956c21f39d1624efed1c756d31aa5fd8.jpg",
+    "profissao": "Cabeleireira",
+    "descricao": "Corto cabelo"
+}
+
+###
+
+GET http://localhost:3000/api/autonomos
+
+###
+
+GET http://localhost:3000/api/autonomo/651337e4ecf9f8a4a9c43799
+
+###
+
+DELETE http://localhost:3000/api/autonomo/65132d7bde48ca2f36fdf860
+
+###
+PUT http://localhost:3000/api/autonomo/651337e4ecf9f8a4a9c43799
+Content-Type: application/json
+
+{
+    "nome": "Lindalva Albu",
+    "dataDeNacimento": "1966-04-04",
+    "cpf": "12345678912",
+    "foto": "https://i.pinimg.com/736x/95/6c/21/956c21f39d1624efed1c756d31aa5fd8.jpg",
+    "profissao": "Cabeleireira",
+    "descricao": "Corto cabelo"
+}
