@@ -4,7 +4,7 @@ Antes de seguir os passos para rodar o projeto local, certifique-se que tenha in
 
 - [Instalar NPM e NodeJS para Windows](https://nodejs.org/en/)
 
-Para instalar no linux rodar esse comando no terminal:
+Para instalar no linux rodar esses comandos no terminal:
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
