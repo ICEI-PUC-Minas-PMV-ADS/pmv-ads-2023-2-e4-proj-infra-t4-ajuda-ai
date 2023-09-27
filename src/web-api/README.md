@@ -7,7 +7,11 @@ Antes de seguir os passos para rodar o projeto local, certifique-se que tenha in
 Para instalar no linux rodar esse comando no terminal:
 
 ```bash
-sudo apt install nodejs npm -y
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+```
+
+```bash
+nvm install 18.18.0
 ```
 
 <h2> Como instalar as dependências do projeto; </h2>
