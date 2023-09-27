@@ -34,7 +34,4 @@ const AutonomoSchema = new Schema(
 
 const Autonomo = mongoose.model("Autonomo", AutonomoSchema);
 
-module.exports = {
-  Autonomo,
-  AutonomoSchema,
-};
+module.exports = Autonomo;

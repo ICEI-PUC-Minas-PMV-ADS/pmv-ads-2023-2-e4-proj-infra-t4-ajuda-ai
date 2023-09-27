@@ -1,15 +1,52 @@
 <h1>API Ajuda Aí!</h1>
 
-.
+Antes de seguir os passos para rodar o projeto local, certifique-se que tenha instalado <strong>NodeJS</strong> e <strong>NPM</strong>
+
+- [Instalar NPM e NodeJS para Windows](https://nodejs.org/en/)
+
+Para instalar no linux rodar esse comando no terminal:
+
+```bash
+sudo apt install nodejs npm -y
+```
 
 <h2> Como instalar as dependências do projeto; </h2>
 
-Comece com o comando <strong>npm install</strong> para baixar todas as dependências do projeto.<br>
-Depois utilize o comando <strong>npm start</strong> para a api ficar ativa no servidor.
+## Rodar localmente
+
+No terminal na sua maquina, clone o repositório:
+
+```bash
+git clone https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-ajuda-ai.git
+```
+
+Vá até o diretório do projeto:
+
+```bash
+cd src/web-api
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Inicie o servidor local:
+
+```bash
+npm start
+```
+
+Inicie o servidor para desenvolvimento do projeto:
+
+```bash
+npm run dev
+```
 
 <h2>Como executar o projeto;</h2>
 
-Depois de ativar o servidor, acesse: <a><strong>http://localhost:3000</strong></a> e la tem as instruções para os acessos aos objetos <strong>Autonomos</strong> e <strong></strong>.
+Depois de ativar o servidor, acesse: <a><strong>http://localhost:3000</strong></a>
 
 <h2>Rotas presentes;</h2> 
   
@@ -18,3 +55,9 @@ Depois de ativar o servidor, acesse: <a><strong>http://localhost:3000</strong></
  <h4>Para Autonomos:</h4>
   
 <strong>Rota para buscar todos os perfils autonomos:</strong> GET <a>http://localhost:3000/api/autonomos</a>
+
+<h3>Para mais informações sobre a API acesse o arquivo:</h3> 
+
+<h4>request.rest</h4>
+
+<li><a href="./request.rest"> Informações da API</a></li>

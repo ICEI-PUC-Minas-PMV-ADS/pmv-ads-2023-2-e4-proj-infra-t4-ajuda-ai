@@ -12,19 +12,8 @@ conn();
 const routes = require("./routes/router");
 app.use("/api", routes);
 
-
-
-// apagar assim que as rotas certas estiverem prontas
-app.get("/", (req, res) => {
-  res.send(
-    `Servidor está funcionando!!! <br/><br/><br/> Teste de camadas >>> <a href="http://localhost:${port}/camada">Teste de camada</a>`
-  );
-});
-
-app.get("/camada", (req, res) => {
-  res.send("Tudo certo!!!");
-});
-// ------------------------------------------------------
+const apresentation = require("./routes/routePresentation");
+apresentation(app, port)
 
 
 app.listen(port, () =>

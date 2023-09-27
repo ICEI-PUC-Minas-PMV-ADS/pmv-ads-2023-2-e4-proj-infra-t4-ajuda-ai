@@ -3,16 +3,16 @@ const router = require("express").Router();
 const autonomoController = require("../controllers/autonomoController");
 
 router
-  .route("/autonomo")
-  .post((req, res) => autonomoController.create(req, res));
-
-router
   .route("/autonomos")
   .get((req, res) => autonomoController.getAll(req, res));
 
 router
   .route("/autonomo/:id")
   .get((req, res) => autonomoController.get(req, res));
+
+router
+.route("/autonomo")
+.post((req, res) => autonomoController.create(req, res));
 
 router
   .route("/autonomo/:id")

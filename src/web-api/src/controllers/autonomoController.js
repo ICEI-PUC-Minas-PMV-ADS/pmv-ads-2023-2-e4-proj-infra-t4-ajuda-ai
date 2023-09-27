@@ -1,4 +1,4 @@
-const { Autonomo: AutonomoModel } = require("../models/Autonomo");
+const AutonomoModel = require("../models/Autonomo");
 
 const autonomoController = {
   create: async (req, res) => {
@@ -60,26 +60,34 @@ const autonomoController = {
     }
   },
   update: async (req, res) => {
-    const id = req.params.id;
+    try {
+      const id = req.params.id;
 
-    const autonomo = {
-      nome: req.body.nome,
-      dataDeNacimento: req.body.dataDeNacimento,
-      cpf: req.body.cpf,
-      foto: req.body.foto,
-      profissao: req.body.profissao,
-      descricao: req.body.descricao,
-    };
+      const autonomo = {
+        nome: req.body.nome,
+        dataDeNacimento: req.body.dataDeNacimento,
+        cpf: req.body.cpf,
+        foto: req.body.foto,
+        profissao: req.body.profissao,
+        descricao: req.body.descricao,
+      };
 
-    const autonomoAtualizado = await AutonomoModel.findByIdAndUpdate(id, autonomo);
+      const autonomoAtualizado = await AutonomoModel.findByIdAndUpdate(
+        id,
+        autonomo
+      );
 
-    
-    if (!autonomoAtualizado) {
-      res.status(404).json({ msg: "Autonomo não encontrado!"});
-      return;
+      if (!autonomoAtualizado) {
+        res.status(404).json({ msg: "Autonomo não encontrado!" });
+        return;
+      }
+
+      res
+        .status(200)
+        .json({ autonomo, msg: "Autonomo atualizado com sucesso!" });
+    } catch (error) {
+      console.log(error);
     }
-
-    res.status(200).json({autonomo, msg: "Autonomo atualizado com sucesso!"});
   },
 };
 
