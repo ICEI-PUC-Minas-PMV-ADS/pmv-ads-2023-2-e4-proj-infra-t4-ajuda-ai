@@ -20,14 +20,6 @@ const UsuarioSchema = new Schema(
       type: String,
       require: true,
     },
-    profissao: {
-      type: [String],
-      require: true,
-    },
-    descricao: {
-      type: String,
-      require: true,
-    },
   },
   { timestamps: true }
 );

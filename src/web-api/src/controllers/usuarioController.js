@@ -53,7 +53,7 @@ const usuarioController = {
       const usuarioDeletado = await UsuarioModel.findByIdAndDelete(id);
       res.status(200).json({
         usuarioDeletado: usuarioDeletado,
-        msg: `Registro de ${usuarioDeletado.nome} excluído com sucesso!`,
+        msg: `Registro de usuário excluído com sucesso!`,
       });
     } catch (error) {
       console.log(error);
