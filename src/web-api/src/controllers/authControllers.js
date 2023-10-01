@@ -15,7 +15,6 @@ const secretKeys = {
   },
 
   verifyJwt: (token) => {
-    console.log("ta chagndo aqui")
     jwt.verify(token, chaveSecreta, (err, decoded) => {
       if (err) {
         return false;
