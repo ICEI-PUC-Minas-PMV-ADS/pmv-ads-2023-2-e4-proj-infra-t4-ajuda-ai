@@ -1,4 +1,5 @@
 const AutonomoModel = require("../models/Autonomo");
+const authControllers = require("../controllers/authControllers")
 
 const autonomoController = {
   create: async (req, res) => {
@@ -9,12 +10,15 @@ const autonomoController = {
         cpf: req.body.cpf,
         foto: req.body.foto,
         profissao: req.body.profissao,
+        senha: req.body.senha,
         descricao: req.body.descricao,
       };
 
       const response = await AutonomoModel.create(autonomo);
 
-      res.status(201).json({ response, msg: "Autonomo registrado!" });
+      const token = authControllers.createJwtCreateObj(autonomo.nome, autonomo.senha);
+
+      res.status(201).json({ response, token, msg: "Autonomo registrado!" });
     } catch (error) {
       console.log(error);
     }
@@ -23,7 +27,16 @@ const autonomoController = {
     try {
       const autonomos = await AutonomoModel.find();
 
-      res.status(200).json(autonomos);
+      const token = req.header('Authorization');
+
+      console.log(token)
+
+      if(authControllers.verifyJwt(token) == false || token === null || token == undefined || token == ''){
+        res.status(403).json({ msg: "token invalido!" });
+      } else {
+        res.status(200).json(autonomos);
+      }
+
     } catch (error) {
       console.log(error);
     }

@@ -24,6 +24,10 @@ const AutonomoSchema = new Schema(
       type: [String],
       require: true,
     },
+    senha:{
+      type: String,
+      require: true,
+    },
     descricao: {
       type: String,
       require: true,
