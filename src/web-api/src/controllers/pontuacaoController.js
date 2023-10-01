@@ -1,24 +1,24 @@
-const PontuacaoModel = require("../models/pontuacao");
+const PontuacaoModel = require("../models/Pontuacao");
 
-const  pontuacaoController = {
+const pontuacaoController = {
   create: async (req, res) => {
     try {
       const pontuacao = {
-        descricao: req.body.descricao,
+        pontuacao: req.body.pontuacao,
       };
 
       const response = await PontuacaoModel.create(pontuacao);
 
-      res.status(201).json({ response, msg: "Comentario registrado!" });
+      res.status(201).json({ response, msg: "Pontuação registrada!" });
     } catch (error) {
       console.log(error);
     }
   },
   getAll: async (req, res) => {
     try {
-      const pontuacao = await PontuacaoModel.find();
+      const pontuacoes = await PontuacaoModel.find();
 
-      res.status(200).json(pontuacao);
+      res.status(200).json(pontuacoes);
     } catch (error) {
       console.log(error);
     }
@@ -39,16 +39,16 @@ const  pontuacaoController = {
     try {
       const id = req.params.id;
       const pontuacao = await PontuacaoModel.findById(id);
-pontuacao
+
       if (!pontuacao) {
         res.status(404).json({ msg: "Pontuação não encontrada!" });
         return;
       }
 
-      const pontuacaoDeletada = await pontuacaoModel.findByIdAndDelete(id);
+      const pontuacaoDeletada = await PontuacaoModel.findByIdAndDelete(id);
       res.status(200).json({
-       pontuacaoDeletada,
-        msg: `Registro de ${pontuacaiDeletada.descricao} excluído com sucesso!`,
+        pontuacaoDeletada,
+        msg: `Registro de ${pontuacaoDeletada.pontuacao} excluído com sucesso!`,
       });
     } catch (error) {
       console.log(error);
@@ -59,12 +59,12 @@ pontuacao
       const id = req.params.id;
 
       const pontuacao = {
-        descricao: req.body.descricao,
+        pontuacao: req.body.pontuacao,
       };
 
-      const pontuacaoAtualizada = await pontuacaoModel.findByIdAndUpdate(
+      const pontuacaoAtualizada = await PontuacaoModel.findByIdAndUpdate(
         id,
-       pontuacao
+        pontuacao
       );
 
       if (!pontuacaoAtualizada) {
