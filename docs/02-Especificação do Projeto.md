@@ -92,9 +92,9 @@ Esses indicadores de desempenho fornecerão insights valiosos sobre a eficácia 
 | RF-005 | Disponibilizar filtros de pesquisa oportunidade serviço                            | MÉDIA      |
 | RF-006 | Permitir a comunicação entre o cliente e o autônomo                                | MÉDIA      |
 | RF-007 | CRUD de comentários nos perfis dos autônomos, pelos usuários                       | ALTA       |
-| RF-008 | Login para autônomos                                                               | ALTA       |
-| RF-009 | Login para usuários                                                                | ALTA       |
-| RF-010 | Opção de avaliação de 1 a 5                                                        | BAIXA      |
+| RF-008 | Sistema de Login com autenticação                                                  | ALTA       |
+| RF-009 | Login com sistema de Segurança por cadastro                                        | ALTA       |
+| RF-010 | CRUD de pontuação                                                                  | ALTA       |
 
 ### Requisitos não Funcionais
 
