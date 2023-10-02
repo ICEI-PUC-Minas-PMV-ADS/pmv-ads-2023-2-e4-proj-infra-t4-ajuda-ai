@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 
 const PontuacaoSchema = new Schema(
   {
-    descricao: {
+    pontuacao: {
       type: String,
       require: true,
     },

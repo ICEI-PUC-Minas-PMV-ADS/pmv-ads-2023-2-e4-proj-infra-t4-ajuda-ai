@@ -1,12 +1,41 @@
 # Registro de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
 
-Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
+<p align="justify"> <b>Resultado do teste de êxito </b></p>
+<p align="justify"> As imagens a seguir demonstra o resultado do teste , sendo que o o sistema não retornou nenhum alerta de erro, o que demonstra o sucesso no envio das Informações:</p>
 
-## Avaliação
+# Testes de Criação de Usuário
+###  Teste de Criação e Listagem Por ID
+![teste](img/testes.png)
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+![teste](img/image.png)
 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
+# Teste de Criação de Autonomos
+![autonomo](img/autonomo.png)
+
+### Listar todos os Autonomos
+![ listar](img/listar%20autonomo.png)
+
+
+# Testes de Coméntario
+###  Teste de Criação
+![Listar](img/criacao.png)
+### Teste de Listagem
+![listar](img/Listar.png)
+### Teste de Listagem Por ID
+![listar id](img/listarid.png)
+### Teste de Atualização
+![Atualização](img/atualizar.png)
+### Teste de Atualização
+![atualização](img/excluir.png)
+
+# Teste de Pontuação
+![pontuacao ](img/pontuacao.png)
+
+<p align="justify"> <b>Resultado do teste de erro </b></p>
+
+##### Teste de Id Invalido
+![invalido](img/invalido.png)
+
+![Alt text](img/autonom.png)
+![Alt text](img/pont.png)
