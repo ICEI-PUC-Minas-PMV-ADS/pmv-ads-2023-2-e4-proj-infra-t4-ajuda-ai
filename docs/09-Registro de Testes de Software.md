@@ -8,7 +8,7 @@
 ###  Teste de Criação
 ![teste](img/testes.png)
 
-![teste](image.png)
+![teste](img/image.png)
 
 ###  Teste de Criação
 ![Listar](img/criacao.png)
