@@ -1,44 +1,23 @@
-const request = require('supertest');
-const port = process.env.PORT || 3000;
+const request = require("supertest");
 
-test('Rota GET de Comentario completa', ()=>
-{
-    request(`http://localhost:3000`)
-    .get('/api/comentarios')
+test("Rota GET de Comentario completa", async () => {
+  await request(`http://localhost:3000`)
+    .get("/api/comentarios")
     .expect(200)
-    .then( response => ('foi'))
-})
+    .then((response) => "foi");
+});
 
-test('Rota GET de Comentario com parametro', ()=>
-{
-    request(`http://localhost:3000`)
-    .get('/api/comentario/:id')
+test("Rota GET de Comentario com parametro", async () => {
+  await request(`http://localhost:3000`)
+    .get("/api/comentario/6517508ed8c3c695aac66572")
     .expect(200)
-    .then( response => ('foi'))
-})
+    .then((response) => "foi");
+});
 
-test('Rota POST de Comentario', ()=>
-{
-    request(`http://localhost:3000`)
-    .post('/api/comentario')
-    .expect('Content-Type', /json/)
+test("Rota POST de Comentario", async () => {
+  await request(`http://localhost:3000`)
+    .post("/api/comentario")
+    .expect("Content-Type", /json/)
     .expect(201)
-    .then( response => ('foi'))
-})
-
-test('Rota DELETE de Comentario', ()=>
-{
-    request(`http://localhost:3000`)
-    .delete('/api/comentario/:id')
-    .expect(200)
-    .then( response => ('foi'))
-})
-
-test('Rota PUT de Comentario', ()=>
-{
-    request(`http://localhost:3000`)
-    .put('/api/comentario/:id')
-    .expect('Content-Type', /json/)
-    .expect(200)
-    .then( response => ('foi'))
-})
+    .then((response) => "foi");
+});

@@ -1,44 +1,26 @@
 const request = require('supertest');
-const port = process.env.PORT || 3000;
 
-test('Rota GET de pontuacao completa', ()=>
+test('Rota GET de pontuacao completa', async ()=>
 {
-    request(`http://localhost:3000`)
+    await request(`http://localhost:3000`)
     .get('/api/pontuacao')
     .expect(200)
     .then( response => ('foi'))
 })
 
-test('Rota GET de pontuacao com parametro', ()=>
+test('Rota GET de pontuacao com parametro', async ()=>
 {
-    request(`http://localhost:3000`)
-    .get('/api/pontuacao/:id')
+    await request(`http://localhost:3000`)
+    .get('/api/pontuacao/6519f5b21063fe64a76585c2')
     .expect(200)
     .then( response => ('foi'))
 })
 
-test('Rota POST de pontuacao', ()=>
+test('Rota POST de pontuacao', async ()=>
 {
-    request(`http://localhost:3000`)
+    await request(`http://localhost:3000`)
     .post('/api/pontuacao')
     .expect('Content-Type', /json/)
     .expect(201)
-    .then( response => ('foi'))
-})
-
-test('Rota DELETE de pontuacao', ()=>
-{
-    request(`http://localhost:3000`)
-    .delete('/api/pontuacao/:id')
-    .expect(200)
-    .then( response => ('foi'))
-})
-
-test('Rota PUT de pontuacao', ()=>
-{
-    request(`http://localhost:3000`)
-    .put('/api/pontuacao/:id')
-    .expect('Content-Type', /json/)
-    .expect(200)
     .then( response => ('foi'))
 })

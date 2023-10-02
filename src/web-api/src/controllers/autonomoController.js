@@ -29,8 +29,6 @@ const autonomoController = {
 
       const token = req.header('Authorization');
 
-      console.log(token)
-
       if(authControllers.verifyJwt(token) == false || token === null || token == undefined || token == ''){
         res.status(403).json({ msg: "token invalido!" });
       } else {
