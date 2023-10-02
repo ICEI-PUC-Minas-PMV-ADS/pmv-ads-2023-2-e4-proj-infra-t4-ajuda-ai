@@ -48,6 +48,12 @@ Inicie o servidor para desenvolvimento do projeto:
 npm run dev
 ```
 
+Depois de subir o servidor use esse comando para rodar a camada de testes unitarios:
+
+```bash
+npm test
+```
+
 <h2>Como executar o projeto;</h2>
 
 Depois de ativar o servidor, acesse: <a><strong>http://localhost:3000</strong></a>
