@@ -5,7 +5,7 @@ const usuarioController = {
     try {
       const usuario = {
         nome: req.body.nome,
-        dataDeNacimento: req.body.dataDeNacimento,
+        dataDeNascimento: req.body.dataDeNascimento,
         cpf: req.body.cpf,
         foto: req.body.foto,
         profissao: req.body.profissao,
@@ -65,7 +65,7 @@ const usuarioController = {
 
       const usuário = {
         nome: req.body.nome,
-        dataDeNacimento: req.body.dataDeNacimento,
+        dataDeNascimento: req.body.dataDeNascimento,
         cpf: req.body.cpf,
         foto: req.body.foto,
         profissao: req.body.profissao,

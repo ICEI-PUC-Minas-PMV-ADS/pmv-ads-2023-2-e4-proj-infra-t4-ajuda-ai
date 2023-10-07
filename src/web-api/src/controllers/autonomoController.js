@@ -6,7 +6,7 @@ const autonomoController = {
     try {
       const autonomo = {
         nome: req.body.nome,
-        dataDeNacimento: req.body.dataDeNacimento,
+        dataDeNascimento: req.body.dataDeNascimento,
         cpf: req.body.cpf,
         foto: req.body.foto,
         profissao: req.body.profissao,
@@ -76,7 +76,7 @@ const autonomoController = {
 
       const autonomo = {
         nome: req.body.nome,
-        dataDeNacimento: req.body.dataDeNacimento,
+        dataDeNascimento: req.body.dataDeNascimento,
         cpf: req.body.cpf,
         foto: req.body.foto,
         profissao: req.body.profissao,
