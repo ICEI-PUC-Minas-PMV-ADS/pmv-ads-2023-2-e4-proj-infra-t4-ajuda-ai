@@ -1,11 +1,5 @@
 # Arquitetura da Solução
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
-
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
-
-![Arquitetura da Solução](img/02-mob-arch.png)
-
 ## Diagrama de Classes
 
 O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
@@ -17,11 +11,11 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 
 ## Modelo ER
 
-O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.]
+O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER”.
+Ferramenta para geração deste artefato: Draw.io.
 
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
+> - ![Modelo ER](./img/ModeloER.png)  
 
 ## Esquema Relacional
 
@@ -31,23 +25,26 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Rel
 
 > - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
 
-## Modelo Físico
+## Modelo em Nuvem
 
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+Todo o banco de dados é criado a partir do proprio projeto backend diretamente na nuvem.
+
+> - [Conexão com o banco](../src/web-api/src/db/conn.js)
+> - [Criação de modelos](../src/web-api/src/models)
 
 ## Tecnologias Utilizadas
 
 Diagrama de Classes : dbdiagram.io  
 Modelo ER : lucid  
-Projeto de Banco de Dados : Atlas - MongoDB
+Projeto de Banco de Dados : Atlas - MongoDB  
 Esquema Relacional : dbdiagram  
 Modelo Fisico : Atlas - MongoDB 
 
 ## Hospedagem
 
 Website e app mobile : Netlify e geração de apk  
-Banco de Dados: Atlas - MongoDB
-Back-End : 
+Banco de Dados: Atlas - MongoDB  
+Back-End : Heroku
 
 ## Qualidade de Software
 
