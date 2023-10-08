@@ -4,7 +4,7 @@ const comentarioController = {
   create: async (req, res) => {
     try {
       const comentario = {
-        descricao: req.body.descricao,
+        descricao: req.body,
       };
 
       const response = await ComentarioModel.create(comentario);

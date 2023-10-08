@@ -1,13 +1,14 @@
 # Arquitetura da Solução
 
+Mesmo que o banco de dados da aplicação seja não relacional e utilizado de forma fluida, as ligações das classes serão representadas abaixo:
+
 ## Diagrama de Classes
 
 O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Classes”.
+Diagrama de Classes.
 
-> - [Diagramas de Classes - Documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.6.1?topic=diagrams-class)
-> - [O que é um diagrama de classe UML? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
+> - ![Diagrama de Classes](./img/diagramadeclasses.png)
 
 ## Modelo ER
 
@@ -19,18 +20,20 @@ Ferramenta para geração deste artefato: Draw.io.
 
 ## Esquema Relacional
 
-O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
+O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.  
  
-As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
+A Imagem abaixo foi retirada diretamente do banco implementado.  
 
-> - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
+Ferramenta para geração deste artefato: dbdiagram.io.  
+
+> - ![Esquema Relacional](./img/esquemarelacional.png)  
 
 ## Modelo em Nuvem
 
-Todo o banco de dados é criado a partir do proprio projeto backend diretamente na nuvem.
+Todo o banco de dados é criado a partir do proprio projeto backend diretamente na nuvem.  
 
-> - [Conexão com o banco](../src/web-api/src/db/conn.js)
-> - [Criação de modelos](../src/web-api/src/models)
+> - [Conexão com o banco](../src/web-api/src/db/conn.js)  
+> - [Criação de modelos](../src/web-api/src/models)  
 
 ## Tecnologias Utilizadas
 

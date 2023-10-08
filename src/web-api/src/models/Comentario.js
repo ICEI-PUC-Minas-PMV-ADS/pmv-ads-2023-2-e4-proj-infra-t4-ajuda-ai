@@ -8,6 +8,14 @@ const ComentarioSchema = new Schema(
       type: String,
       require: true,
     },
+    autonomoId: {
+      type: String,
+      require: true,
+    },
+    usuarioId: {
+      type: String,
+      require: true,
+    }
   },
   { timestamps: true }
 );
