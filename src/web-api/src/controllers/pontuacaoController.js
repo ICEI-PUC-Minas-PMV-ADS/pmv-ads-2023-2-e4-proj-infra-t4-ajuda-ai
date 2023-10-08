@@ -3,9 +3,7 @@ const PontuacaoModel = require("../models/Pontuacao");
 const pontuacaoController = {
   create: async (req, res) => {
     try {
-      const pontuacao = {
-        pontuacao: req.body,
-      };
+      const pontuacao = req.body;
 
       const response = await PontuacaoModel.create(pontuacao);
 

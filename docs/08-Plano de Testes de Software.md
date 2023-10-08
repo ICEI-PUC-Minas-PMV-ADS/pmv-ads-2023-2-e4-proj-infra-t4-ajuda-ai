@@ -1,19 +1,21 @@
 # Plano de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
+Testes aplicação back-end:
 
-Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
+# BACK-END  
+Testes aplicação back-end:  
+Clique aqui em <a href="./web-api"> API - AJUDA AÍ </a> para iniciar a aplicação backend.<br/><br/>
+Dentro da documentação, vai conter o comando: <p style="color:violet">npm test</p> Assim que a aplicação estiver rodando, usando esse comando no mesmo diretorio, porém em outro terminal, irá rodar os testes unitarios na aplicação.<br/><br/>
+# FRONT-END WEB
 
-Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
+Em andamento...
+
+# FRONT-END MONILE
+
+Em andamento...
  
-## Ferramentas de Testes (Opcional)
+## Ferramentas de Testes
 
 Comente sobre as ferramentas de testes utilizadas.
  
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
-> - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+Ferramenta de teste para aplicação back-end em *Node.js*: <a href="https://jestjs.io/pt-BR/">JEST</a> e <a href="https://www.npmjs.com/package/supertest">SuperTest</a>

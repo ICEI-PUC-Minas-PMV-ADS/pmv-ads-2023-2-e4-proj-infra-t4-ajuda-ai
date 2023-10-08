@@ -11,7 +11,7 @@ test('Rota GET de usuarios completa', async ()=>
 test('Rota GET de usuarios com parametro', async ()=>
 {
     await request(`http://localhost:3000`)
-    .get('/api/usuario/6519ea511063fe64a7658592')
+    .get('/api/usuario/6519f837512f92c2bbf8b8b6')
     .expect(200)
     .then( response => ('foi'))
 })
