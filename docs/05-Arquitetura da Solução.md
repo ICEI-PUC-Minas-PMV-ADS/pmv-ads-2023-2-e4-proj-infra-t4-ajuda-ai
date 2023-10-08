@@ -1,68 +1,79 @@
 # Arquitetura da Solução
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
-
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
-
-![Arquitetura da Solução](img/02-mob-arch.png)
+Mesmo que o banco de dados da aplicação seja não relacional e utilizado de forma fluida, as ligações das classes serão representadas abaixo:
 
 ## Diagrama de Classes
 
 O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Classes”.
+Diagrama de Classes.
 
-> - [Diagramas de Classes - Documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.6.1?topic=diagrams-class)
-> - [O que é um diagrama de classe UML? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
+> - ![Diagrama de Classes](./img/diagramadeclasses.png)
 
 ## Modelo ER
 
-O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.]
+O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER”.
+Ferramenta para geração deste artefato: Draw.io.
 
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
+> - ![Modelo ER](./img/ModeloER.png)  
 
 ## Esquema Relacional
 
-O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
+O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.  
  
-As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
+A Imagem abaixo foi retirada diretamente do banco implementado.  
 
-> - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
+Ferramenta para geração deste artefato: dbdiagram.io.  
 
-## Modelo Físico
+> - ![Esquema Relacional](./img/esquemarelacional.png)  
 
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+## Modelo em Nuvem
+
+Todo o banco de dados é criado a partir do proprio projeto backend diretamente na nuvem.  
+
+> - [Conexão com o banco](../src/web-api/src/db/conn.js)  
+> - [Criação de modelos](../src/web-api/src/models)  
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+Diagrama de Classes : dbdiagram.io  
+Modelo ER : lucid  
+Projeto de Banco de Dados : Atlas - MongoDB  
+Esquema Relacional : dbdiagram  
+Modelo Fisico : Atlas - MongoDB 
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+Website e app mobile : Netlify e geração de apk  
+Banco de Dados: Atlas - MongoDB  
+Back-End : Heroku
 
 ## Qualidade de Software
 
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
+A norma ISO/25010 define um modelo de qualidade de software que inclui oito características principais, cada uma com subcaracterísticas. A tabela abaixo apresenta essas características e subcaracterísticas:
 
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
-
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
-
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
+|Característica de Qualidade	|Subcaracterísticas	|Métricas	|Pontos|
+|--------------------|------------------------------------|----------------------------------------|----------------------------------------|
+|Funcionalidade	|Adequação	|Número de requisitos atendidos	|5|
+| |Acurácia	|Número de erros de precisão	|5|
+| |Interoperabilidade	|Número de sistemas com os quais se comunica	|3|
+| |Conformidade	|Número de requisitos regulamentares atendidos	|2|
+| |Segurança de acesso	|Número de vulnerabilidades de segurança identificadas	|5|
+|Confiabilidade	|Maturidade	|Tempo médio entre falhas	|4|
+| |Tolerância a falhas	|Número máximo de falhas toleráveis antes da interrupção do serviço	|4|
+| |Recuperabilidade	|Tempo médio de recuperação após uma falha	|3|
+|Usabilidade	|Compreensibilidade	|Nível de escolaridade necessário para usar o sistema	|3|
+| |Aprendizagem	|Tempo médio necessário para realizar uma tarefa pela primeira vez	|3|
+| |Operabilidade	|Número de cliques/telas necessárias para realizar uma tarefa	|3|
+| |Atratividade	|Número de usuários que avaliam o sistema como "atraente"	|2|
+|Eficiência	|Comportamento em relação ao tempo	|Tempo médio de resposta do sistema	|4|
+| |Comportamento em relação aos recursos	|Uso médio de recursos do sistema	|3|
+|Manutenibilidade	|Analisabilidade	|Tempo médio necessário para identificar a causa de um defeito	|3|
+| |Modificabilidade	|Tempo médio necessário para implementar uma alteração	|4|
+| |Estabilidade	|Número de defeitos identificados após uma alteração	|3|
+| |Testabilidade	|Número de testes necessários para validar uma alteração	|3|
+|Portabilidade	|Adaptabilidade	|Número de plataformas para as quais o sistema é portável	|3|
+| |Capacidade de instalação	|Tempo médio necessário para instalar o sistema	|2|
+| |Coexistência	|Número de sistemas com os quais o sistema pode coexistir	|2|
+| |Substituibilidade	|Tempo médio necessário para substituir o sistema	|2|

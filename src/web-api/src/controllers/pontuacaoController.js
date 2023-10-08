@@ -4,7 +4,7 @@ const pontuacaoController = {
   create: async (req, res) => {
     try {
       const pontuacao = {
-        pontuacao: req.body.pontuacao,
+        pontuacao: req.body,
       };
 
       const response = await PontuacaoModel.create(pontuacao);

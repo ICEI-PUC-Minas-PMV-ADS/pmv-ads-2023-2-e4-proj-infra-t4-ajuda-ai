@@ -8,7 +8,7 @@ const AutonomoSchema = new Schema(
       type: String,
       require: true,
     },
-    dataDeNacimento: {
+    dataDeNascimento: {
       type: Date,
       require: true,
     },

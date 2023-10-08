@@ -71,8 +71,6 @@ Impacto Social Positivo: Ao criar uma rede mais eficiente e confiável de autôn
 
 ## Indicadores de Desempenho
 
-Usar o seguinte modelo:
-
 ![Indicadores de Desempenho](img/indicadorDesempenho.png)
 
 Esses indicadores de desempenho fornecerão insights valiosos sobre a eficácia da plataforma e ajudarão a identificar áreas que precisam de ajustes ou melhorias ao longo do tempo.
