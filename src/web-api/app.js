@@ -6,13 +6,13 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-const apresentation = require("./routes/routePresentation");
+const apresentation = require("./src/routes/routePresentation");
 apresentation(app, port);
 
-const conn = require("./db/conn");
+const conn = require("./src/db/conn");
 conn();
 
-const routes = require("./routes/router");
+const routes = require("./src/routes/router");
 app.use("/api", routes);
 
 
