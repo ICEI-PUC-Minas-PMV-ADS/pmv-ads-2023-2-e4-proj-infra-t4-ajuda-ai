@@ -47,7 +47,7 @@ Modelo Fisico : Atlas - MongoDB
 
 Website e app mobile : Netlify e geração de apk  
 Banco de Dados: Atlas - MongoDB  
-Back-End : Heroku
+Back-End : Render
 
 ## Qualidade de Software
 
