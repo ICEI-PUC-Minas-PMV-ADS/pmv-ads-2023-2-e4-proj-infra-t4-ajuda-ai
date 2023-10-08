@@ -1,15 +1,149 @@
 # Programação de Funcionalidades
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="5-Arquitetura da Solução.md"> Arquitetura da Solução</a>
+- RF-001
+  src/web-api/src/routes/autonomos.js
 
-Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
+```
+const router = require("express").Router();
 
-Para cada requisito funcional, pode ser entregue um artefato desse tipo
+const autonomoController = require("../controllers/autonomoController");
 
-> **Links Úteis**:
->
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+router
+  .route("/autonomos")
+  .get((req, res) => autonomoController.getAll(req, res));
+
+router
+  .route("/autonomo/:id")
+  .get((req, res) => autonomoController.get(req, res));
+
+router
+.route("/autonomo")
+.post((req, res) => autonomoController.create(req, res));
+
+router
+  .route("/autonomo/:id")
+  .delete((req, res) => autonomoController.delete(req, res));
+
+router
+  .route("/autonomo/:id")
+  .put((req, res) => autonomoController.update(req, res));
+
+module.exports = router;
+```
+
+- RF-002
+  src/web-api/src/routes/usuarios.js
+
+```
+const router = require("express").Router();
+
+const usuarioController = require("../controllers/usuarioController");
+
+router
+  .route("/usuarios")
+  .get((req, res) => usuarioController.getAll(req, res));
+
+router
+  .route("/usuario/:id")
+  .get((req, res) => usuarioController.get(req, res));
+
+router
+  .route("/usuario")
+  .post((req, res) => usuarioController.create(req, res));
+
+router
+  .route("/usuario/:id")
+  .delete((req, res) => usuarioController.delete(req, res));
+
+router
+  .route("/usuario/:id")
+  .put((req, res) => usuarioController.update(req, res));
+
+module.exports = router;
+```
+
+- RF-003
+- RF-004
+- RF-005
+- RF-006
+- RF-007
+  src/web-api/src/routes/comentarios.js
+
+```
+const router = require("express").Router();
+
+const comentarioController = require("../controllers/comentarioController");
+
+router
+  .route("/comentarios")
+  .get((req, res) => comentarioController.getAll(req, res));
+
+router
+  .route("/comentario/:id")
+  .get((req, res) => comentarioController.get(req, res));
+
+router
+.route("/comentario")
+.post((req, res) => comentarioController.create(req, res));
+
+router
+  .route("/comentario/:id")
+  .delete((req, res) => comentarioController.delete(req, res));
+
+router
+  .route("/comentario/:id")
+  .put((req, res) => comentarioController.update(req, res));
+
+module.exports = router;
+```
+
+- RF-008
+  src/web-api/src/routes/auth.js
+
+```
+const router = require("express").Router();
+
+const authControllers = require("../controllers/authControllers")
+
+router
+  .route("/objetoParaJWT")
+  .post((req, res) => authControllers.createJwt(req, res));
+
+router
+  .route("/jwtParaObjeto")
+  .post((req, res) => authControllers.transformJwtInObj(req, res));
+
+module.exports = router;
+```
+
+- RF-009
+- RF-010
+  src/web-api/src/routes/pontuacao.js
+
+```
+const router = require("express").Router();
+
+const pontuacaoController = require("../controllers/pontuacaoController");
+
+router
+  .route("/pontuacao")
+  .get((req, res) => pontuacaoController.getAll(req, res));
+
+router
+  .route("/pontuacao/:id")
+  .get((req, res) => pontuacaoController.get(req, res));
+
+router
+.route("/pontuacao")
+.post((req, res) => pontuacaoController.create(req, res));
+
+router
+  .route("/pontuacao/:id")
+  .delete((req, res) => pontuacaoController.delete(req, res));
+
+router
+  .route("/pontuacao/:id")
+  .put((req, res) => pontuacaoController.update(req, res));
+
+module.exports = router;
+```
