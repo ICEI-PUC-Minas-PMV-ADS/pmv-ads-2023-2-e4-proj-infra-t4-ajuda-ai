@@ -117,6 +117,55 @@ module.exports = router;
 ```
 
 - RF-009
+
+```
+const router = require("express").Router();
+
+const authControllers = require("../controllers/authControllers")
+
+router
+  .route("/objetoParaJWT")
+  .post((req, res) => authControllers.createJwt(req, res));
+
+router
+  .route("/jwtParaObjeto")
+  .post((req, res) => authControllers.transformJwtInObj(req, res));
+
+module.exports = router;
+```
+
+```
+router
+.route("/autonomo")
+.post((req, res) => autonomoController.create(req, res));
+```
+
+```
+const autonomoController = {
+  create: async (req, res) => {
+    try {
+      const autonomo = {
+        nome: req.body.nome,
+        dataDeNascimento: req.body.dataDeNascimento,
+        cpf: req.body.cpf,
+        foto: req.body.foto,
+        profissao: req.body.profissao,
+        senha: req.body.senha,
+        descricao: req.body.descricao,
+      };
+
+      const response = await AutonomoModel.create(autonomo);
+
+      const token = authControllers.createJwtCreateObj(autonomo.nome, autonomo.senha);
+
+      res.status(201).json({ response, token, msg: "Autonomo registrado!" });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+};
+```
+
 - RF-010
   src/web-api/src/routes/pontuacao.js
 
