@@ -34,3 +34,13 @@ Content-Type: application/json
     "profissao": "Cabeleireira",
     "descricao": "Corto cabelo"
 }
+
+###
+POST http://localhost:3000/api/pontuacao
+Content-Type: application/json
+
+{
+    "pontuacao": "5",
+    "autonomoId": "6513380decf9f8a4a9c4379f",
+    "usuarioId": "6519f837512f92c2bbf8b8b6"
+}

@@ -70,4 +70,8 @@ Depois de ativar o servidor, acesse: <a><strong>http://localhost:3000</strong></
 
 <h4>request.rest</h4>
 
-<li><a href="./request.rest"> Informações da API</a></li>
+<li><a href="./request.rest"> Informações da API</a></li> <br/>
+
+<h1>DEPLOY DA APLICAÇÃO!</h1>
+
+[Back-end Ajuda aí](https://ajuda-ai-backend.onrender.com/)

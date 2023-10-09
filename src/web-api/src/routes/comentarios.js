@@ -11,8 +11,8 @@ router
   .get((req, res) => comentarioController.get(req, res));
 
 router
-.route("/comentario")
-.post((req, res) => comentarioController.create(req, res));
+  .route("/comentario")
+  .post((req, res) => comentarioController.create(req, res));
 
 router
   .route("/comentario/:id")
