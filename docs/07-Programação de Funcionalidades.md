@@ -198,6 +198,7 @@ const validarCPF = (cpf) => {
 - RF-004
 - RF-005
 - RF-006
+
 - RF-007
   src/web-api/src/routes/comentarios.js
 
