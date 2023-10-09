@@ -8,7 +8,7 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 Diagrama de Classes.
 
-> - ![Diagrama de Classes](./img/diagramadeclasses.png)
+![Diagrama de Classes](./img/diagramadeclasses.png)
 
 ## Modelo ER
 
@@ -16,7 +16,7 @@ O Modelo ER representa através de um diagrama como as entidades (coisas, objeto
 
 Ferramenta para geração deste artefato: Draw.io.
 
-> - ![Modelo ER](./img/ModeloER.png)  
+![Modelo ER](./img/ModeloER.png)  
 
 ## Esquema Relacional
 
@@ -26,14 +26,14 @@ A Imagem abaixo foi retirada diretamente do banco implementado.
 
 Ferramenta para geração deste artefato: dbdiagram.io.  
 
-> - ![Esquema Relacional](./img/esquemarelacional.png)  
+![Esquema Relacional](./img/esquemarelacional.png)  
 
 ## Modelo em Nuvem
 
 Todo o banco de dados é criado a partir do proprio projeto backend diretamente na nuvem.  
 
-> - [Conexão com o banco](../src/web-api/src/db/conn.js)  
-> - [Criação de modelos](../src/web-api/src/models)  
+ - [Conexão com o banco](../src/web-api/src/db/conn.js)  
+ - [Criação de modelos](../src/web-api/src/models)  
 
 ## Tecnologias Utilizadas
 
