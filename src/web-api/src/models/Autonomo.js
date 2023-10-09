@@ -15,6 +15,14 @@ const AutonomoSchema = new Schema(
     cpf: {
       type: String,
       require: true,
+    },    
+    telefone: {
+      type: String,
+      require: true,
+    },
+    email: {
+      type: String,
+      require: true,
     },
     foto: {
       type: String,
