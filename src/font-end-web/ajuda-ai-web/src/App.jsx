@@ -8,6 +8,7 @@ import Cadastro from "./paginas/cadastro";
 import { RotasPublicas, RotasProtegidas } from "./componentes/rotas";
 import MinhasInformacoes from "./paginas/minhas-informacoes";
 import Inicio from "./paginas/inicio";
+import Perfil from "./paginas/perfil";
 
 function App() {
   const theme = createTheme(customTheme);
@@ -47,6 +48,14 @@ function App() {
             element={
               <RotasProtegidas>
                 <MinhasInformacoes />
+              </RotasProtegidas>
+            }
+          />
+          <Route
+            path="/:id"
+            element={
+              <RotasProtegidas>
+                <Perfil />
               </RotasProtegidas>
             }
           />

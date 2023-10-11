@@ -3,14 +3,14 @@ import { createTheme as createThemeMUI } from "@mui/material/styles";
 const customTheme = {
   palette: {
     primary: {
-      main: "#3446ba",
-      light: "#3a4ec4",
-      dark: "#2131a2",
+      main: "#3f51b4",
+      light: "#757de8",
+      dark: "#002984",
     },
     secondary: {
-      main: "#FFC848",
-      light: "#ffde4f",
-      dark: "#fcb140",
+      main: "#f44336",
+      light: "#ff7961",
+      dark: "#ba000d",
     },
     background: {
       default: "#f2f4f7",
@@ -23,7 +23,7 @@ const customTheme = {
     },
   },
   shape: {
-    borderRadius: 10,
+    borderRadius: 8,
   },
 };
 

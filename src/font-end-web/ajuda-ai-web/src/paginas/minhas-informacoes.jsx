@@ -36,26 +36,57 @@ const MinhasInformacoes = () => {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  autoComplete="given-name"
-                  name="firstName"
+                  autoComplete="name"
+                  name="name"
                   required
                   fullWidth
-                  id="firstName"
+                  id="name"
                   label="Nome"
                   autoFocus
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
+                  autoComplete="document"
+                  name="document"
                   required
                   fullWidth
-                  id="lastName"
-                  label="Sobrenome"
-                  name="lastName"
-                  autoComplete="family-name"
+                  id="document"
+                  label="Documento"
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  autoComplete="telephone"
+                  name="telephone"
+                  required
+                  fullWidth
+                  id="telephone"
+                  label="Telefone"
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  type="date"
+                  autoComplete="birthdate"
+                  name="birthdate"
+                  required
+                  fullWidth
+                  id="birthdate"
+                  label="Data de nascimento"
+                />
+              </Grid>
+              <Grid item xs={6}>
+                <TextField
+                  required
+                  fullWidth
+                  id="profession"
+                  label="Profissão"
+                  name="profession"
+                  autoComplete="profession"
+                />
+              </Grid>
+              <Grid item xs={6}>
                 <TextField
                   required
                   fullWidth
@@ -63,6 +94,17 @@ const MinhasInformacoes = () => {
                   label="Email"
                   name="email"
                   autoComplete="email"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="description"
+                  label="Descrição"
+                  name="description"
+                  autoComplete="description"
+                  multiline
                 />
               </Grid>
               <Grid item xs={12}>

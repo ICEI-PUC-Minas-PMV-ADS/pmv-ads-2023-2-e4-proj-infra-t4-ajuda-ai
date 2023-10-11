@@ -20,7 +20,7 @@ const Header = () => {
       elevation={0}
       sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
     >
-      <Toolbar sx={{ flexWrap: "wrap", backgroundColor: "secondary.main" }}>
+      <Toolbar sx={{ flexWrap: "wrap", backgroundColor: "background.default" }}>
         <Box noWrap sx={{ flexGrow: 1 }}>
           <Typography
             variant="h4"
