@@ -1,12 +1,4 @@
-import {
-  Avatar,
-  Box,
-  Card,
-  Container,
-  CssBaseline,
-  Typography,
-} from "@mui/material";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { Container, CssBaseline } from "@mui/material";
 import CardListagem from "../componentes/card-listagem";
 import { useNavigate } from "react-router-dom";
 
