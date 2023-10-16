@@ -1,6 +1,8 @@
 import { Container, CssBaseline } from "@mui/material";
 import CardListagem from "../componentes/card-listagem";
 import { useNavigate } from "react-router-dom";
+import { useQuery } from "react-query";
+import axios from "axios";
 
 export const listagem = [
   {
@@ -44,13 +46,19 @@ export const listagem = [
 const Inicio = () => {
   const navigate = useNavigate();
 
+  const { data: listagemUsuarios } = useQuery("listagemUsuarios", async () => {
+    const response = axios.get("http://localhost:3000/api/usuarios");
+
+    return response;
+  });
+
   return (
     <Container component="main" maxWidth="lg">
       <CssBaseline />
-      {listagem.map((item) => (
+      {listagemUsuarios?.data?.map((item, index) => (
         <CardListagem
           dados={item}
-          key={item.id}
+          key={index}
           onClick={() => navigate(`/${item.id}`)}
         />
       ))}
