@@ -47,7 +47,7 @@ const Inicio = () => {
   const navigate = useNavigate();
 
   const { data: listagemUsuarios } = useQuery("listagemUsuarios", async () => {
-    const response = axios.get("http://localhost:3000/api/usuarios");
+    const response = axios.get("https://ajuda-ai-backend.onrender.com/api/usuarios");
 
     return response;
   });
