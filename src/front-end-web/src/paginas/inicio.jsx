@@ -47,7 +47,10 @@ const Inicio = () => {
   const navigate = useNavigate();
 
   const { data: listagemUsuarios } = useQuery("listagemUsuarios", async () => {
-    const response = axios.get("https://ajuda-ai-backend.onrender.com/api/usuarios");
+    const response = axios.get("https://ajuda-ai-backend.onrender.com/api/autonomos",{
+    headers: {
+      'Authorization': `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiTWFyY3VzIFRlc3RlIiwic2VuaGEiOiIxMjMiLCJpYXQiOjE2OTcwNjg2MTh9.-Q0bpWF7W7AHt9YjJjtcirwhIACTUj_iJQ6bgMsBnTk`
+    }})
 
     return response;
   });

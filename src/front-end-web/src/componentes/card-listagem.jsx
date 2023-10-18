@@ -14,8 +14,8 @@ const CardListagem = ({ dados, onClick }) => {
           </Box>
           <Box display="flex" flexDirection="column" gap={1} p={2}>
             <Typography>Nome: {dados.nome}</Typography>
-            <Typography>Profissão: </Typography>
-            <Typography>Descrição: </Typography>
+            <Typography>Profissão: {dados.profissao[0]} </Typography>
+            <Typography>Descrição: {dados.descricao} </Typography>
           </Box>
         </Box>
       </Card>
