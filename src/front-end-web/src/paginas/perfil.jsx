@@ -17,10 +17,7 @@ import { listagem } from "./inicio";
 const Perfil = () => {
   const { id } = useParams();
 
-  const dados = useMemo(
-    () => listagem.find((item) => item.id === Number(id)),
-    [id]
-  );
+  const dados = useMemo(() => listagem.find((item) => item.id === id), [id]);
 
   return (
     <Container component="main" maxWidth="lg">
@@ -44,13 +41,13 @@ const Perfil = () => {
               </Grid>
               <Grid item xs={10}>
                 <Box display="flex" flexDirection="column" gap={1} p={2}>
-                  <Typography>Nome: {dados.nome}</Typography>
-                  <Typography>Profissão: {dados.profissao}</Typography>
-                  <Typography>Documento: {dados.documento}</Typography>
+                  <Typography>Nome: {dados?.nome}</Typography>
+                  <Typography>Profissão: {dados?.profissao}</Typography>
+                  <Typography>Documento: {dados?.documento}</Typography>
                   <Typography>
-                    Data de nascimento: {dados.dataDeNascimento}
+                    Data de nascimento: {dados?.dataDeNascimento}
                   </Typography>
-                  <Typography>Descrição: {dados.descricao}</Typography>
+                  <Typography>Descrição: {dados?.descricao}</Typography>
                 </Box>
               </Grid>
             </Grid>
