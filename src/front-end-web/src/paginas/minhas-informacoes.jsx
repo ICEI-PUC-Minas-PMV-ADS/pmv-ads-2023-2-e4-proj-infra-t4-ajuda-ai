@@ -13,8 +13,10 @@ import EditIcon from "@mui/icons-material/Edit";
 import { useState } from "react";
 import Modal from "../componentes/modal";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const MinhasInformacoes = () => {
+  const navigate = useNavigate();
   const [excluirContaModal, setExcluirContaModal] = useState(false);
   const toggleExcluirContaModal = () => setExcluirContaModal((state) => !state);
 
@@ -52,6 +54,18 @@ const MinhasInformacoes = () => {
       .catch((error) => {
         console.error("Erro:", error);
       });
+  };
+
+  const onConfirmExcluirConta = async () => {
+    try {
+      await axios.delete(
+        ` https://ajuda-ai-backend.onrender.com/api/usuario/${loginInfo.response._id}`
+      );
+      localStorage.removeItem("login");
+      navigate("/");
+    } catch (error) {
+      console.error("Erro:", error);
+    }
   };
 
   return (
@@ -195,6 +209,7 @@ const MinhasInformacoes = () => {
         open={excluirContaModal}
         handleClose={toggleExcluirContaModal}
         title="Tem certeza que deseja excluir sua conta?"
+        onConfirm={onConfirmExcluirConta}
       />
     </Container>
   );
