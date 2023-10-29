@@ -11,22 +11,35 @@ import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Container from "@mui/material/Container";
 import { useNavigate } from "react-router-dom";
-import { LoginContext } from "../context/LoginContext";
-import { useContext } from "react";
 import { Card, CssBaseline } from "@mui/material";
+import axios from "axios";
 
 const Login = () => {
-  const { setLoginInfo } = useContext(LoginContext);
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    setLoginInfo({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
-    navigate("/inicio");
+
+    try {
+      const response = await axios.post(
+        "https://ajuda-ai-backend.onrender.com/api/login-perfil",
+        {
+          perfil: "autonomo",
+          email: data.get("email"),
+          senha: data.get("password"),
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      localStorage.setItem("login", JSON.stringify(response.data));
+      navigate("/inicio");
+    } catch {
+      console.log("erro");
+    }
   };
 
   return (

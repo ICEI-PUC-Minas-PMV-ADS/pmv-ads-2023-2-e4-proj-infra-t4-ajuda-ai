@@ -13,6 +13,7 @@ import axios from "axios";
 
 const Inicio = () => {
   const navigate = useNavigate();
+  const loginInfo = JSON.parse(localStorage.getItem("login"));
 
   const {
     data: listagemAutonomos,
@@ -23,7 +24,7 @@ const Inicio = () => {
       "https://ajuda-ai-backend.onrender.com/api/autonomos",
       {
         headers: {
-          Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiTWFyY3VzIFRlc3RlIiwic2VuaGEiOiIxMjMiLCJpYXQiOjE2OTcwNjg2MTh9.-Q0bpWF7W7AHt9YjJjtcirwhIACTUj_iJQ6bgMsBnTk`,
+          Authorization: loginInfo.token,
         },
       }
     );

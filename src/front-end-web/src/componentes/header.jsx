@@ -2,16 +2,14 @@ import AppBar from "@mui/material/AppBar";
 import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { useContext } from "react";
-import { LoginContext } from "../context/LoginContext";
 import MenuDropdown from "./menu-dropdown";
 
 import { Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const { loginInfo } = useContext(LoginContext);
   const navigate = useNavigate();
+  const loginInfo = JSON.parse(localStorage.getItem("login"));
 
   return (
     <AppBar
@@ -26,12 +24,14 @@ const Header = () => {
             variant="h4"
             color="primary.main"
             sx={{ cursor: "pointer" }}
-            onClick={() => navigate(loginInfo.email ? "/inicio" : "/")}
+            onClick={() =>
+              navigate(loginInfo?.response.email ? "/inicio" : "/")
+            }
           >
             ajuda | aí
           </Typography>
         </Box>
-        {loginInfo.email ? (
+        {loginInfo?.response.email ? (
           <MenuDropdown />
         ) : (
           <>
