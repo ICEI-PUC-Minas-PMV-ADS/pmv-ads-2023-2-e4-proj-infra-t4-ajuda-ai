@@ -1,11 +1,8 @@
 /* eslint-disable react/prop-types */
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
@@ -13,12 +10,16 @@ import Container from "@mui/material/Container";
 import { useNavigate } from "react-router-dom";
 import { Card, CssBaseline } from "@mui/material";
 import axios from "axios";
+import { useState } from "react";
+import { LoadingButton } from "@mui/lab";
 
 const Login = () => {
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
     const data = new FormData(event.currentTarget);
 
     try {
@@ -36,8 +37,10 @@ const Login = () => {
         }
       );
       localStorage.setItem("login", JSON.stringify(response.data));
+      setLoading(false);
       navigate("/inicio");
     } catch (error) {
+      setLoading(false);
       console.error("Erro:", error);
     }
   };
@@ -82,24 +85,16 @@ const Login = () => {
                 id="password"
                 autoComplete="current-password"
               />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              />
-              <Button
+              <LoadingButton
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                loading={loading}
               >
                 Entrar
-              </Button>
-              <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Esqueceu a senha?
-                  </Link>
-                </Grid>
+              </LoadingButton>
+              <Grid container justifyContent="flex-end">
                 <Grid item>
                   <Link href="/cadastro" variant="body2">
                     {"Cadastre-se aqui"}

@@ -1,5 +1,4 @@
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import Link from "@mui/material/Link";
@@ -11,12 +10,16 @@ import Container from "@mui/material/Container";
 import { Card } from "@mui/material";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { LoadingButton } from "@mui/lab";
 
 const Cadastro = () => {
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
     const data = new FormData(event.currentTarget);
 
     const formData = {
@@ -54,8 +57,10 @@ const Cadastro = () => {
         }
       );
       localStorage.setItem("login", JSON.stringify(response.data));
+      setLoading(false);
       navigate("/inicio");
     } catch (error) {
+      setLoading(false);
       console.error("Erro:", error);
     }
   };
@@ -144,14 +149,15 @@ const Cadastro = () => {
                   />
                 </Grid>
               </Grid>
-              <Button
+              <LoadingButton
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                loading={loading}
               >
                 Cadastro
-              </Button>
+              </LoadingButton>
               <Grid container justifyContent="flex-end">
                 <Grid item>
                   <Link href="/login" variant="body2">

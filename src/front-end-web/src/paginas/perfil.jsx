@@ -1,7 +1,6 @@
 import {
   Avatar,
   Box,
-  Button,
   Card,
   Container,
   CssBaseline,
@@ -14,8 +13,11 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import axios from "axios";
+import { useState } from "react";
+import { LoadingButton } from "@mui/lab";
 
 const Perfil = () => {
+  const [loading, setLoading] = useState(false);
   const { id } = useParams();
   const loginInfo = JSON.parse(localStorage.getItem("login"));
 
@@ -52,6 +54,7 @@ const Perfil = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
 
     const data = new FormData(event.currentTarget);
 
@@ -69,9 +72,10 @@ const Perfil = () => {
           },
         }
       );
-
+      setLoading(false);
       refetchListagemComentarios();
     } catch (error) {
+      setLoading(false);
       console.error("Erro:", error);
     }
   };
@@ -121,7 +125,12 @@ const Perfil = () => {
                       Documento: {buscaAutonomo?.data.cpf}
                     </Typography>
                     <Typography>
-                      Data de nascimento: {buscaAutonomo?.data.dataDeNascimento}
+                      Data de nascimento:{" "}
+                      {buscaAutonomo?.data.dataDeNascimento
+                        ?.slice(0, 10)
+                        .split("-")
+                        .reverse()
+                        .join("/")}
                     </Typography>
                     <Typography>
                       Descrição: {buscaAutonomo?.data.descricao}
@@ -151,9 +160,13 @@ const Perfil = () => {
                     multiline
                   />
                 </Box>
-                <Button type="submit" variant="contained">
+                <LoadingButton
+                  type="submit"
+                  variant="contained"
+                  loading={loading}
+                >
                   Enviar
-                </Button>
+                </LoadingButton>
               </Box>
               <Box
                 sx={{
@@ -163,13 +176,15 @@ const Perfil = () => {
                   gap: 2,
                 }}
               >
-                {listagemComentarios?.data?.map((item, index) => (
-                  <Card key={index}>
-                    <Box padding={2}>
-                      <Typography>{item.descricao}</Typography>
-                    </Box>
-                  </Card>
-                ))}
+                {listagemComentarios?.data
+                  ?.filter((item) => item.autonomoId === id)
+                  .map((item, index) => (
+                    <Card key={index}>
+                      <Box padding={2}>
+                        <Typography>{item.descricao}</Typography>
+                      </Box>
+                    </Card>
+                  ))}
               </Box>
             </Box>
           </Card>
