@@ -36,9 +36,8 @@ const Perfil = () => {
     return response;
   });
 
-  const { data: listagemComentarios } = useQuery(
-    "listagemComentarios",
-    async () => {
+  const { data: listagemComentarios, refetch: refetchListagemComentarios } =
+    useQuery("listagemComentarios", async () => {
       const response = axios.get(
         "https://ajuda-ai-backend.onrender.com/api/comentarios",
         {
@@ -49,27 +48,34 @@ const Perfil = () => {
       );
 
       return response;
-    }
-  );
-  const { data: adicionarComentarios } = useQuery(
-    "adicionarComentarios",
-    async () => {
-      const response = await axios.post(
-        "https://ajuda-ai-backend.onrender.com/api/comentarios",
+    });
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const data = new FormData(event.currentTarget);
+
+    try {
+      await axios.post(
+        "https://ajuda-ai-backend.onrender.com/api/comentario",
         {
-          autonomoId,
-          descricao,
+          autonomoId: buscaAutonomo.data._id,
+          descricao: data.get("comentario"),
+          usuarioId: loginInfo.response._id,
         },
         {
           headers: {
-            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiTWFyY3VzIFRlc3RlIiwic2VuaGEiOiIxMjMiLCJpYXQiOjE2OTcwNjg2MTh9.-Q0bpWF7W7AHt9YjJjtcirwhIACTUj_iJQ6bgMsBnTk`,
+            Authorization: loginInfo.token,
           },
         }
       );
-  
-      return response; 
+
+      refetchListagemComentarios();
+    } catch {
+      console.log("erro");
     }
-  );
+  };
+
   return (
     <Container component="main" maxWidth="lg">
       <CssBaseline />
@@ -125,6 +131,7 @@ const Perfil = () => {
               </Grid>
               <Box
                 component="form"
+                onSubmit={handleSubmit}
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -144,7 +151,7 @@ const Perfil = () => {
                     multiline
                   />
                 </Box>
-                <Button variant="contained"  onSubmit={handleSubmit(adicionarComentarios)}>
+                <Button type="submit" variant="contained">
                   Enviar
                 </Button>
               </Box>
@@ -163,7 +170,6 @@ const Perfil = () => {
                     </Box>
                   </Card>
                 ))}
-                <Card></Card>
               </Box>
             </Box>
           </Card>
