@@ -12,6 +12,18 @@ const UsuarioSchema = new Schema(
       type: Date,
       require: true,
     },
+    telefone: {
+      type: String,
+      require: true,
+    },
+    email: {
+      type: String,
+      require: true,
+    },
+    senha:{
+      type: String,
+      require: true,
+    },
     cpf: {
       type: String,
       require: true,
