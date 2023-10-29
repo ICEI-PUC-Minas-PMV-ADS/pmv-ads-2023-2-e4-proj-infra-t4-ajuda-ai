@@ -51,7 +51,25 @@ const Perfil = () => {
       return response;
     }
   );
-
+  const { data: adicionarComentarios } = useQuery(
+    "adicionarComentarios",
+    async () => {
+      const response = await axios.post(
+        "https://ajuda-ai-backend.onrender.com/api/comentarios",
+        {
+          autonomoId,
+          descricao,
+        },
+        {
+          headers: {
+            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiTWFyY3VzIFRlc3RlIiwic2VuaGEiOiIxMjMiLCJpYXQiOjE2OTcwNjg2MTh9.-Q0bpWF7W7AHt9YjJjtcirwhIACTUj_iJQ6bgMsBnTk`,
+          },
+        }
+      );
+  
+      return response; 
+    }
+  );
   return (
     <Container component="main" maxWidth="lg">
       <CssBaseline />
@@ -126,7 +144,7 @@ const Perfil = () => {
                     multiline
                   />
                 </Box>
-                <Button variant="contained" type="submit">
+                <Button variant="contained"  onSubmit={handleSubmit(adicionarComentarios)}>
                   Enviar
                 </Button>
               </Box>
