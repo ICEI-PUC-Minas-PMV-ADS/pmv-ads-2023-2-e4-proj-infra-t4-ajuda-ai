@@ -97,8 +97,6 @@ const MinhasInformacoes = () => {
                   id="name"
                   label="Nome"
                   autoFocus
-                  value={loginInfo.response.nome}
-                  disabled
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -110,7 +108,6 @@ const MinhasInformacoes = () => {
                   id="document"
                   label="Documento"
                   value={loginInfo.response.cpf}
-                  disabled
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -121,8 +118,6 @@ const MinhasInformacoes = () => {
                   fullWidth
                   id="telephone"
                   label="Telefone"
-                  value={loginInfo.response.telefone}
-                  disabled
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -134,7 +129,6 @@ const MinhasInformacoes = () => {
                   fullWidth
                   id="birthdate"
                   label="Data de nascimento"
-                  disabled
                 />
               </Grid>
               <Grid item xs={6}>
@@ -145,7 +139,6 @@ const MinhasInformacoes = () => {
                   label="Profissão"
                   name="profession"
                   autoComplete="profession"
-                  value={loginInfo.response.profissao}
                 />
               </Grid>
               <Grid item xs={6}>
@@ -156,7 +149,6 @@ const MinhasInformacoes = () => {
                   label="Email"
                   name="email"
                   autoComplete="email"
-                  value={loginInfo.response.email}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -168,7 +160,6 @@ const MinhasInformacoes = () => {
                   name="description"
                   autoComplete="description"
                   multiline
-                  value={loginInfo.response.descricao}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -180,8 +171,6 @@ const MinhasInformacoes = () => {
                   type="password"
                   id="password"
                   autoComplete="new-password"
-                  value={loginInfo.response.senha}
-                  disabled
                 />
               </Grid>
             </Grid>
