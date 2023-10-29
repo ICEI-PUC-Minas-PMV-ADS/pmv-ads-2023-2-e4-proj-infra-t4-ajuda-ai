@@ -9,34 +9,55 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { Card } from "@mui/material";
-import axios from 'axios'; 
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Cadastro = () => {
-  const handleSubmit = (event) => {
+  const navigate = useNavigate();
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
 
     const formData = {
-      nome: data.get('firstName') + " " + data.get('lastName'),
+      nome: data.get("firstName") + " " + data.get("lastName"),
       dataDeNascimento: "1996-03-07",
-      telefone: data.get('telephone'),
-      email: data.get('email'),
-      senha: data.get('password'),
-      cpf: data.get('document'),
-      foto: "https://img.freepik.com/fotos-gratis/jovem-afro-americano-bonito-com-camiseta-caqui_176420-32042.jpg"
+      telefone: data.get("telephone"),
+      email: data.get("email"),
+      senha: data.get("password"),
+      cpf: data.get("document"),
+      foto: "https://img.freepik.com/fotos-gratis/jovem-afro-americano-bonito-com-camiseta-caqui_176420-32042.jpg",
     };
 
-    axios.post('https://ajuda-ai-backend.onrender.com/api/usuario', formData, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then(response => {
-        console.log(response.data);
-      })
-      .catch(error => {
-        console.error('Erro:', error);
-      });
+    try {
+      await axios.post(
+        "https://ajuda-ai-backend.onrender.com/api/usuario",
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      const response = await axios.post(
+        "https://ajuda-ai-backend.onrender.com/api/login-perfil",
+        {
+          perfil: "autonomo",
+          email: data.get("email"),
+          senha: data.get("password"),
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      localStorage.setItem("login", JSON.stringify(response.data));
+      navigate("/inicio");
+    } catch (error) {
+      console.error("Erro:", error);
+    }
   };
 
   return (

@@ -37,8 +37,8 @@ const Login = () => {
       );
       localStorage.setItem("login", JSON.stringify(response.data));
       navigate("/inicio");
-    } catch {
-      console.log("erro");
+    } catch (error) {
+      console.error("Erro:", error);
     }
   };
 
