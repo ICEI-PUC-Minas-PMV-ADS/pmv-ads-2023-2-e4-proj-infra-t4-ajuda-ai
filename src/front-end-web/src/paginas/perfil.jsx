@@ -75,6 +75,23 @@ const Perfil = () => {
                 Enviar
               </Button>
             </Box>
+            <Box
+              sx={{
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                gap: 2,
+              }}
+            >
+              {listagemComentarios?.data?.map((item, index) => (
+                <Card key={index}>
+                  <Box padding={2}>
+                    <Typography>{item.descricao}</Typography>
+                  </Box>
+                </Card>
+              ))}
+              <Card></Card>
+            </Box>
           </Box>
         </Card>
       </Box>

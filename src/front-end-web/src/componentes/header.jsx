@@ -38,6 +38,11 @@ const Header = () => {
             <Button href="/login" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
               Login
             </Button>
+
+            <Button href="/list-comentario" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
+              Listagem comentario apenas teste 
+            </Button>
+
             <Button
               href="/cadastro"
               variant="contained"

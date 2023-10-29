@@ -9,6 +9,7 @@ import { RotasPublicas, RotasProtegidas } from "./componentes/rotas";
 import MinhasInformacoes from "./paginas/minhas-informacoes";
 import Inicio from "./paginas/inicio";
 import Perfil from "./paginas/perfil";
+import ListComentario from "./paginas/list-comentario";
 
 function App() {
   const theme = createTheme(customTheme);
@@ -51,6 +52,16 @@ function App() {
               </RotasProtegidas>
             }
           />
+
+          <Route
+            path="/list-comentario"
+            element={
+              <RotasPublicas>
+                <ListComentario />
+              </RotasPublicas>
+            }
+          />
+
           <Route
             path="/:id"
             element={
