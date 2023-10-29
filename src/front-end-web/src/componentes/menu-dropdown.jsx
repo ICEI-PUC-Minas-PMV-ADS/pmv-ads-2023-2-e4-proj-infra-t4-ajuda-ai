@@ -1,13 +1,11 @@
 import { Avatar } from "@mui/material";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { LoginContext } from "../context/LoginContext";
 import { useNavigate } from "react-router-dom";
 
 const MenuDropdown = () => {
-  const { setLoginInfo } = useContext(LoginContext);
   const [anchorEl, setAnchorEl] = useState(null);
   const navigate = useNavigate();
 
@@ -23,7 +21,7 @@ const MenuDropdown = () => {
     navigate("/minhas-informacoes");
   };
   const handleLogout = () => {
-    setLoginInfo({ email: "", password: "" });
+    localStorage.removeItem("login");
     setAnchorEl(null);
     navigate("/");
   };

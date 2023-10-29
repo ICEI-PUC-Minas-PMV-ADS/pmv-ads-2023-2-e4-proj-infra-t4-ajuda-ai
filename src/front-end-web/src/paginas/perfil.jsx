@@ -17,6 +17,7 @@ import axios from "axios";
 
 const Perfil = () => {
   const { id } = useParams();
+  const loginInfo = JSON.parse(localStorage.getItem("login"));
 
   const {
     data: buscaAutonomo,
@@ -27,7 +28,7 @@ const Perfil = () => {
       `https://ajuda-ai-backend.onrender.com/api/autonomo/${id}`,
       {
         headers: {
-          Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiTWFyY3VzIFRlc3RlIiwic2VuaGEiOiIxMjMiLCJpYXQiOjE2OTcwNjg2MTh9.-Q0bpWF7W7AHt9YjJjtcirwhIACTUj_iJQ6bgMsBnTk`,
+          Authorization: loginInfo.token,
         },
       }
     );
@@ -42,7 +43,7 @@ const Perfil = () => {
         "https://ajuda-ai-backend.onrender.com/api/comentarios",
         {
           headers: {
-            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiTWFyY3VzIFRlc3RlIiwic2VuaGEiOiIxMjMiLCJpYXQiOjE2OTcwNjg2MTh9.-Q0bpWF7W7AHt9YjJjtcirwhIACTUj_iJQ6bgMsBnTk`,
+            Authorization: loginInfo.token,
           },
         }
       );
