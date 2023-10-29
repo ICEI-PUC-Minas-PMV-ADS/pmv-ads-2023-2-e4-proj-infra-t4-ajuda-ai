@@ -13,11 +13,29 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useParams } from "react-router-dom";
 import { useMemo } from "react";
 import { listagem } from "./inicio";
+import { useQuery } from "react-query";
+import axios from "axios";
 
 const Perfil = () => {
   const { id } = useParams();
 
   const dados = useMemo(() => listagem.find((item) => item.id === id), [id]);
+
+  const { data: listagemComentarios } = useQuery(
+    "listagemComentarios",
+    async () => {
+      const response = axios.get(
+        "https://ajuda-ai-backend.onrender.com/api/comentarios",
+        {
+          headers: {
+            Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiTWFyY3VzIFRlc3RlIiwic2VuaGEiOiIxMjMiLCJpYXQiOjE2OTcwNjg2MTh9.-Q0bpWF7W7AHt9YjJjtcirwhIACTUj_iJQ6bgMsBnTk`,
+          },
+        }
+      );
+
+      return response;
+    }
+  );
 
   return (
     <Container component="main" maxWidth="lg">

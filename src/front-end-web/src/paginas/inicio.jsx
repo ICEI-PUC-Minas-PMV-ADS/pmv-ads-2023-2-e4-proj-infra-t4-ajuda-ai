@@ -11,7 +11,7 @@ export const listagem = [
     profissao: "Desenvolvedor Web BackEnd",
     dataDeNascimento: "1966-04-04T00:00:00.000Z",
     documento: "810.479.200-85",
-    descricao: "Faço desenvolvimento de sites web teste",
+    descricao: "Faço desenvolvimento de sites web",
   },
   {
     id: 2,
