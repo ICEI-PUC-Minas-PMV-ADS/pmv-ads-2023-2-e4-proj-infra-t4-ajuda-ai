@@ -36,9 +36,8 @@ const Perfil = () => {
     return response;
   });
 
-  const { data: listagemComentarios } = useQuery(
-    "listagemComentarios",
-    async () => {
+  const { data: listagemComentarios, refetch: refetchListagemComentarios } =
+    useQuery("listagemComentarios", async () => {
       const response = axios.get(
         "https://ajuda-ai-backend.onrender.com/api/comentarios",
         {
@@ -49,8 +48,33 @@ const Perfil = () => {
       );
 
       return response;
+    });
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const data = new FormData(event.currentTarget);
+
+    try {
+      await axios.post(
+        "https://ajuda-ai-backend.onrender.com/api/comentario",
+        {
+          autonomoId: buscaAutonomo.data._id,
+          descricao: data.get("comentario"),
+          usuarioId: loginInfo.response._id,
+        },
+        {
+          headers: {
+            Authorization: loginInfo.token,
+          },
+        }
+      );
+
+      refetchListagemComentarios();
+    } catch {
+      console.log("erro");
     }
-  );
+  };
 
   return (
     <Container component="main" maxWidth="lg">
@@ -107,6 +131,7 @@ const Perfil = () => {
               </Grid>
               <Box
                 component="form"
+                onSubmit={handleSubmit}
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -126,7 +151,7 @@ const Perfil = () => {
                     multiline
                   />
                 </Box>
-                <Button variant="contained" type="submit">
+                <Button type="submit" variant="contained">
                   Enviar
                 </Button>
               </Box>
@@ -145,7 +170,6 @@ const Perfil = () => {
                     </Box>
                   </Card>
                 ))}
-                <Card></Card>
               </Box>
             </Box>
           </Card>
