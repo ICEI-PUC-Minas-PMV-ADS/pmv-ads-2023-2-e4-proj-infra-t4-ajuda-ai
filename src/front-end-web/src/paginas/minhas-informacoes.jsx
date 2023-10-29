@@ -10,35 +10,42 @@ import {
   Typography,
 } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
-import axios from 'axios'; 
+import axios from "axios";
 
 const MinhasInformacoes = () => {
+  const loginInfo = JSON.parse(localStorage.getItem("login"));
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
 
     const formData = {
-      nome: data.get('name'),
-      dataDeNascimento: data.get('birthdate'),
-      telefone: data.get('telephone'),
-      email: data.get('email'),
-      senha: data.get('password'),
-      cpf: data.get('document'),
-      foto: "https://img.freepik.com/fotos-gratis/jovem-afro-americano-bonito-com-camiseta-caqui_176420-32042.jpg"
+      nome: data.get("name"),
+      dataDeNascimento: data.get("birthdate"),
+      telefone: data.get("telephone"),
+      email: data.get("email"),
+      senha: data.get("password"),
+      cpf: data.get("document"),
+      foto: "https://img.freepik.com/fotos-gratis/jovem-afro-americano-bonito-com-camiseta-caqui_176420-32042.jpg",
     };
 
-    const idUsuario = "653ebee75b17190cdcb9f89d"
+    const idUsuario = "653ebee75b17190cdcb9f89d";
 
-    axios.put(`https://ajuda-ai-backend.onrender.com/api/usuario/${idUsuario}`, formData, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then(response => {
+    axios
+      .put(
+        `https://ajuda-ai-backend.onrender.com/api/usuario/${idUsuario}`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((response) => {
         console.log(response.data);
       })
-      .catch(error => {
-        console.error('Erro:', error);
+      .catch((error) => {
+        console.error("Erro:", error);
       });
   };
 
@@ -73,6 +80,7 @@ const MinhasInformacoes = () => {
                   id="name"
                   label="Nome"
                   autoFocus
+                  value={loginInfo.response.nome}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -83,6 +91,7 @@ const MinhasInformacoes = () => {
                   fullWidth
                   id="document"
                   label="Documento"
+                  value={loginInfo.response.cpf}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -93,6 +102,7 @@ const MinhasInformacoes = () => {
                   fullWidth
                   id="telephone"
                   label="Telefone"
+                  value={loginInfo.response.telefone}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -114,6 +124,7 @@ const MinhasInformacoes = () => {
                   label="Profissão"
                   name="profession"
                   autoComplete="profession"
+                  value={loginInfo.response.profissao}
                 />
               </Grid>
               <Grid item xs={6}>
@@ -124,6 +135,7 @@ const MinhasInformacoes = () => {
                   label="Email"
                   name="email"
                   autoComplete="email"
+                  value={loginInfo.response.email}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -135,6 +147,7 @@ const MinhasInformacoes = () => {
                   name="description"
                   autoComplete="description"
                   multiline
+                  value={loginInfo.response.descricao}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -146,6 +159,7 @@ const MinhasInformacoes = () => {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  value={loginInfo.response.senha}
                 />
               </Grid>
             </Grid>
