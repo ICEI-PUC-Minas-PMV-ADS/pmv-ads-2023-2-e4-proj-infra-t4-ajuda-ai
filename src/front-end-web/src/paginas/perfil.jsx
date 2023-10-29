@@ -71,8 +71,8 @@ const Perfil = () => {
       );
 
       refetchListagemComentarios();
-    } catch {
-      console.log("erro");
+    } catch (error) {
+      console.error("Erro:", error);
     }
   };
 

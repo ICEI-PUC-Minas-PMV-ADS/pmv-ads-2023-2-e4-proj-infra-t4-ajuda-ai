@@ -25,7 +25,7 @@ const Login = () => {
       const response = await axios.post(
         "https://ajuda-ai-backend.onrender.com/api/login-perfil",
         {
-          perfil: "autonomo",
+          perfil: "usuario",
           email: data.get("email"),
           senha: data.get("password"),
         },
@@ -37,8 +37,8 @@ const Login = () => {
       );
       localStorage.setItem("login", JSON.stringify(response.data));
       navigate("/inicio");
-    } catch {
-      console.log("erro");
+    } catch (error) {
+      console.error("Erro:", error);
     }
   };
 
