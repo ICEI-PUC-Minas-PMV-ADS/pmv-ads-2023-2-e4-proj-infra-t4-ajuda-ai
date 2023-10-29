@@ -9,6 +9,7 @@ import { RotasPublicas, RotasProtegidas } from "./componentes/rotas";
 import MinhasInformacoes from "./paginas/minhas-informacoes";
 import Inicio from "./paginas/inicio";
 import Perfil from "./paginas/perfil";
+import Home from "./paginas/home";
 
 function App() {
   const theme = createTheme(customTheme);
@@ -18,7 +19,14 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<></>} />
+          <Route
+            path="/"
+            element={
+              <RotasPublicas>
+                <Home />
+              </RotasPublicas>
+            }
+          />
           <Route
             path="/login"
             element={

@@ -28,7 +28,7 @@ const Header = () => {
             sx={{ cursor: "pointer" }}
             onClick={() => navigate(loginInfo.email ? "/inicio" : "/")}
           >
-            Ajuda aí
+            ajuda | aí
           </Typography>
         </Box>
         {loginInfo.email ? (

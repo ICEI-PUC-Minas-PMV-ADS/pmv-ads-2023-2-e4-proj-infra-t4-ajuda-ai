@@ -35,11 +35,13 @@ const Inicio = () => {
     <Container component="main" maxWidth="lg">
       <CssBaseline />
       {isFetchingListagemAutonomos ? (
-        <Card>
-          <Box padding={2}>
-            <LinearProgress />
-          </Box>
-        </Card>
+        <Box m={2}>
+          <Card>
+            <Box padding={2}>
+              <LinearProgress />
+            </Box>
+          </Card>
+        </Box>
       ) : isErrorListagemAutonomos ? (
         <Card>
           <Box padding={2} display="flex" justifyContent="center">
