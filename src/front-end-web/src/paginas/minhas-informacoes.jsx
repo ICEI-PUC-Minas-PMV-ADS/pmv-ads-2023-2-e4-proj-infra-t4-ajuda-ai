@@ -36,8 +36,6 @@ const MinhasInformacoes = () => {
       foto: "https://img.freepik.com/fotos-gratis/jovem-afro-americano-bonito-com-camiseta-caqui_176420-32042.jpg",
     };
 
-    const idUsuario = "653ebee75b17190cdcb9f89d";
-
     axios
       .put(
         `https://ajuda-ai-backend.onrender.com/api/usuario/${loginInfo.response._id}`,
@@ -100,6 +98,7 @@ const MinhasInformacoes = () => {
                   label="Nome"
                   autoFocus
                   value={loginInfo.response.nome}
+                  disabled
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -111,6 +110,7 @@ const MinhasInformacoes = () => {
                   id="document"
                   label="Documento"
                   value={loginInfo.response.cpf}
+                  disabled
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -122,6 +122,7 @@ const MinhasInformacoes = () => {
                   id="telephone"
                   label="Telefone"
                   value={loginInfo.response.telefone}
+                  disabled
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -133,6 +134,7 @@ const MinhasInformacoes = () => {
                   fullWidth
                   id="birthdate"
                   label="Data de nascimento"
+                  disabled
                 />
               </Grid>
               <Grid item xs={6}>
@@ -179,6 +181,7 @@ const MinhasInformacoes = () => {
                   id="password"
                   autoComplete="new-password"
                   value={loginInfo.response.senha}
+                  disabled
                 />
               </Grid>
             </Grid>
