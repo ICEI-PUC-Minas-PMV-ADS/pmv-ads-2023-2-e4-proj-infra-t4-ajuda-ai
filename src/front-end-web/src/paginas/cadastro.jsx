@@ -20,7 +20,7 @@ const Cadastro = () => {
     const data = new FormData(event.currentTarget);
 
     const formData = {
-      nome: data.get("firstName") + " " + data.get("lastName"),
+      nome: `${data.get("firstName")} ${data.get("lastName")}`,
       dataDeNascimento: "1996-03-07",
       telefone: data.get("telephone"),
       email: data.get("email"),

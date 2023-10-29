@@ -33,7 +33,7 @@ const MinhasInformacoes = () => {
 
     axios
       .put(
-        `https://ajuda-ai-backend.onrender.com/api/usuario/${idUsuario}`,
+        `https://ajuda-ai-backend.onrender.com/api/usuario/${loginInfo.response._id}`,
         formData,
         {
           headers: {
