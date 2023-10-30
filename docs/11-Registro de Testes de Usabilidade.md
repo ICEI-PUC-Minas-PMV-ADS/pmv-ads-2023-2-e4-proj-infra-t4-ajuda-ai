@@ -11,7 +11,7 @@ Foi utilizada a ferramenta Maze para a verificação da usabilidade das páginas
  Página: Login -> ![login](img/login-usabilidade.PNG)
 
 ### - Cadastro
- Página: cadastro-> ![cadastro](img/usabilidade-cadastro.PNG)
+ Página: cadastro-> ![cadastro](img/cadastro-usabilidade.PNG)
 
  ### - Inicio
  Página: Inicio -> ![Inicio](img/procura.PNG)
