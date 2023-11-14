@@ -1,6 +1,6 @@
 # BACK-END
 
-Clique aqui em _<a href="./web-api"> API - Ajuda Aí </a>_ contém a documentação para iniciar a aplicação backend.
+Clique aqui em _<a href="./web-api"> Backend Ajuda Aí </a>_ contém a documentação para iniciar a aplicação backend.
 
 # FRONT-END WEB
 
