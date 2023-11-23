@@ -4,25 +4,41 @@ import CardListagem from "./card-listagem";
 import { FlatList } from "react-native-gesture-handler";
 import { ProgressBar } from "react-native-paper";
 import { theme } from "../theme";
+import { useEffect, useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Inicio = () => {
-  const {
-    data: listagemAutonomos,
-    isFetching: isFetchingListagemAutonomos,
-    // isError: isErrorListagemAutonomos,
-  } = useQuery("listagemAutonomo", async () => {
-    const response = axios.get(
-      "https://ajuda-ai-backend.onrender.com/api/autonomos",
-      {
-        headers: {
-          Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiTWFyY3VzIFRlc3RlIiwic2VuaGEiOiIxMjMiLCJpYXQiOjE2OTcwNjg2MTh9.-Q0bpWF7W7AHt9YjJjtcirwhIACTUj_iJQ6bgMsBnTk`,
-        },
-      }
+  const [login, setLogin] = useState({});
+
+  const checkLogin = async () => {
+    const loginInfo = await AsyncStorage.getItem("@login");
+    if (loginInfo) {
+      setLogin(JSON.parse(loginInfo));
+    }
+  };
+
+  useEffect(() => {
+    checkLogin();
+  }, []);
+
+  const { data: listagemAutonomos, isFetching: isFetchingListagemAutonomos } =
+    useQuery(
+      "listagemAutonomo",
+      async () => {
+        const response = axios.get(
+          "https://ajuda-ai-backend.onrender.com/api/autonomos",
+          {
+            headers: {
+              Authorization: login.token,
+            },
+          }
+        );
+
+        return response;
+      },
+      { enabled: Boolean(login.token) }
     );
 
-    return response;
-  });
-  console.log(listagemAutonomos?.data);
   return isFetchingListagemAutonomos ? (
     <ProgressBar
       style={{ margin: 10 }}

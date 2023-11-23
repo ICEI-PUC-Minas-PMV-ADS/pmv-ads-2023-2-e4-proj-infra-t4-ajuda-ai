@@ -2,12 +2,48 @@ import { useState } from "react";
 import { View, StyleSheet, Text } from "react-native";
 import { Button, TextInput, Icon } from "react-native-paper";
 import { theme } from "../theme";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import axios from "axios";
 
 const Login = ({ setPage, setIsLogged }) => {
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({});
 
   const isEmailValid = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const handleSubmit = async () => {
+    setLoading(true);
+
+    if (!form.email || !form.password) {
+      alert("Preencha todos os campos");
+    } else if (!isEmailValid(form.email)) {
+      alert("Email inválido");
+    } else {
+      try {
+        const response = await axios.post(
+          "https://ajuda-ai-backend.onrender.com/api/login-perfil",
+          {
+            perfil: "usuario",
+            email: form.email,
+            senha: form.password,
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        await AsyncStorage.setItem("@login", JSON.stringify(response.data));
+
+        setLoading(false);
+        setIsLogged(true);
+      } catch (error) {
+        setLoading(false);
+        console.error("Erro:", error);
+      }
+    }
   };
 
   return (
@@ -39,15 +75,8 @@ const Login = ({ setPage, setIsLogged }) => {
         <Button
           mode="contained"
           theme={theme}
-          onPress={() => {
-            if (!form.email || !form.password) {
-              alert("Preencha todos os campos");
-            } else if (!isEmailValid(form.email)) {
-              alert("Email inválido");
-            } else {
-              setIsLogged(true);
-            }
-          }}
+          loading={loading}
+          onPress={() => handleSubmit()}
         >
           Entrar
         </Button>
