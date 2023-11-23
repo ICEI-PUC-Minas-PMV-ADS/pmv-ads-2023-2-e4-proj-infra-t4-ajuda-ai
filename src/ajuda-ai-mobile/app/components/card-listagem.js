@@ -1,10 +1,18 @@
 import { Text, View, StyleSheet } from "react-native";
 import { Icon } from "react-native-paper";
 import { theme } from "../theme";
+import { useNavigation } from "@react-navigation/native";
 
 const CardListagem = ({ dados }) => {
+  const navigation = useNavigation();
+
   return (
-    <View style={styles.constainer}>
+    <View
+      style={styles.constainer}
+      onStartShouldSetResponder={() =>
+        navigation.navigate("perfil", { id: dados._id })
+      }
+    >
       <Icon source="account" size={30} color={theme.colors.primary} />
       <View>
         <Text>Nome: {dados?.nome}</Text>

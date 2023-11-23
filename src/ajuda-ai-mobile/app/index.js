@@ -18,6 +18,7 @@ import MinhasInformacoes from "./components/minhas-informacoes";
 import { queryClient } from "./services/queryClient";
 import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import Perfil from "./components/perfil";
 
 const Drawer = createDrawerNavigator();
 
@@ -133,11 +134,20 @@ export default function Page() {
             }}
           />
           <Drawer.Screen
-            name="favorite-pets"
+            name="minhas-informacoes"
             component={MinhasInformacoes}
             options={{
               title: "Minhas informações",
             }}
+          />
+          <Drawer.Screen
+            name="perfil"
+            component={Perfil}
+            options={{
+              title: "",
+              drawerItemStyle: { display: "none" },
+            }}
+            initialParams={{ id: "" }}
           />
         </Drawer.Navigator>
       </PaperProvider>
