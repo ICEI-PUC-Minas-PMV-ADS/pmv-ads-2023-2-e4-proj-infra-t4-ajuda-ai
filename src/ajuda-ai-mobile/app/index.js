@@ -7,7 +7,7 @@ import {
 } from "@react-navigation/drawer";
 import { QueryClientProvider } from "react-query";
 import { theme } from "./theme";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Home from "./components/home";
 import Login from "./components/login";
@@ -16,12 +16,34 @@ import { StatusBar } from "react-native";
 import Inicio from "./components/inicio";
 import MinhasInformacoes from "./components/minhas-informacoes";
 import { queryClient } from "./services/queryClient";
+import { useNavigation } from "@react-navigation/native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Drawer = createDrawerNavigator();
 
 export default function Page() {
   const [isLogged, setIsLogged] = useState(false);
   const [page, setPage] = useState("home");
+  const navigation = useNavigation();
+
+  const checkLogin = async () => {
+    const login = await AsyncStorage.getItem("@login");
+    if (login) {
+      setIsLogged(true);
+      setPage("");
+      navigation.navigate("home-screen");
+    }
+  };
+
+  useEffect(() => {
+    checkLogin();
+  }, []);
+
+  const logout = async () => {
+    await AsyncStorage.removeItem("@login");
+    setIsLogged(false);
+    setPage("login");
+  };
 
   if (!isLogged && page === "home") {
     return (
@@ -76,8 +98,6 @@ export default function Page() {
             drawerLabelStyle: {
               fontSize: 15,
             },
-
-            // drawerCol,
           }}
           drawerContent={(props) => {
             return (
@@ -89,6 +109,7 @@ export default function Page() {
                 <DrawerItem
                   label="Sair"
                   onPress={() => {
+                    logout();
                     setIsLogged(false);
                     setPage("login");
                   }}
