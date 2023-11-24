@@ -2,7 +2,14 @@ import * as React from "react";
 import { Button, Dialog, Portal, Text } from "react-native-paper";
 import { theme } from "../theme";
 
-const Modal = ({ open, handleClose, onConfirm, title, textContent }) => {
+const Modal = ({
+  open,
+  handleClose,
+  onConfirm,
+  title,
+  textContent,
+  loading,
+}) => {
   return (
     <Portal>
       <Dialog
@@ -15,7 +22,7 @@ const Modal = ({ open, handleClose, onConfirm, title, textContent }) => {
           <Text variant="bodySmall">{textContent}</Text>
         </Dialog.Content>
         <Dialog.Actions>
-          <Button mode="contained" onPress={onConfirm}>
+          <Button mode="contained" onPress={onConfirm} loading={loading}>
             Confirmar
           </Button>
         </Dialog.Actions>

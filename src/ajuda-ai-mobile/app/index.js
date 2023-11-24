@@ -135,7 +135,9 @@ export default function Page() {
           />
           <Drawer.Screen
             name="minhas-informacoes"
-            component={MinhasInformacoes}
+            component={() => (
+              <MinhasInformacoes setPage={setPage} setIsLogged={setIsLogged} />
+            )}
             options={{
               title: "Minhas informações",
             }}
