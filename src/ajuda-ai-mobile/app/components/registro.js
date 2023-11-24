@@ -2,12 +2,68 @@ import { useState } from "react";
 import { View, StyleSheet, Text } from "react-native";
 import { Button, TextInput, Icon } from "react-native-paper";
 import { theme } from "../theme";
+import axios from "axios";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Registro = ({ setPage, setIsLogged }) => {
   const [form, setForm] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const isEmailValid = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const formData = {
+    nome: form.name,
+    dataDeNascimento: "1996-03-07",
+    telefone: "11999999999",
+    email: form.email,
+    senha: form.password,
+    cpf: "235.698.960-99",
+    foto: "https://img.freepik.com/fotos-gratis/jovem-afro-americano-bonito-com-camiseta-caqui_176420-32042.jpg",
+  };
+
+  const handleSubmit = async () => {
+    setLoading(true);
+
+    if (!form.name || !form.email || !form.password) {
+      alert("Preencha todos os campos");
+    } else if (!isEmailValid(form.email)) {
+      alert("Preencha um email válido");
+    } else {
+      try {
+        await axios.post(
+          "https://ajuda-ai-backend.onrender.com/api/usuario",
+          formData,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+
+        const response = await axios.post(
+          "https://ajuda-ai-backend.onrender.com/api/login-perfil",
+          {
+            perfil: "usuario",
+            email: form.email,
+            senha: form.password,
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        await AsyncStorage.setItem("@login", JSON.stringify(response.data));
+
+        setLoading(false);
+        setIsLogged(true);
+      } catch (error) {
+        setLoading(false);
+        console.error("Erro:", error);
+      }
+    }
   };
 
   return (
@@ -46,15 +102,8 @@ const Registro = ({ setPage, setIsLogged }) => {
         <Button
           theme={theme}
           mode="contained"
-          onPress={() => {
-            if (!form.name || !form.email || !form.password) {
-              alert("Preencha todos os campos");
-            } else if (!isEmailValid(form.email)) {
-              alert("Preencha um email válido");
-            } else {
-              setIsLogged(true);
-            }
-          }}
+          loading={loading}
+          onPress={() => handleSubmit()}
         >
           Cadastrar
         </Button>

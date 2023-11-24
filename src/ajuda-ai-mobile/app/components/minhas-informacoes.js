@@ -3,11 +3,43 @@ import { Button, TextInput, DefaultTheme } from "react-native-paper";
 import { theme } from "../theme";
 import { ScrollView } from "react-native-gesture-handler";
 import Modal from "./modal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
-const MinhasInformacoes = () => {
+const MinhasInformacoes = ({ setPage, setIsLogged }) => {
   const [excluirContaModal, setExcluirContaModal] = useState(false);
+  const [login, setLogin] = useState({});
   const toggleExcluirContaModal = () => setExcluirContaModal((state) => !state);
+  const [loading, setLoading] = useState(false);
+
+  const checkLogin = async () => {
+    const loginInfo = await AsyncStorage.getItem("@login");
+    if (loginInfo) {
+      setLogin(JSON.parse(loginInfo));
+    }
+  };
+
+  useEffect(() => {
+    checkLogin();
+  }, []);
+
+  const onConfirmExcluirConta = async () => {
+    setLoading(true);
+    try {
+      await axios.delete(
+        ` https://ajuda-ai-backend.onrender.com/api/usuario/${login.response._id}`
+      );
+      await AsyncStorage.removeItem("@login");
+      toggleExcluirContaModal();
+      setLoading(false);
+      setIsLogged(false);
+      setPage("home");
+    } catch (error) {
+      console.error("Erro:", error);
+      setLoading(false);
+    }
+  };
 
   return (
     <ScrollView>
@@ -56,7 +88,8 @@ const MinhasInformacoes = () => {
         open={excluirContaModal}
         handleClose={toggleExcluirContaModal}
         title="Tem certeza que deseja excluir sua conta?"
-        onConfirm={toggleExcluirContaModal}
+        onConfirm={onConfirmExcluirConta}
+        loading={loading}
       />
     </ScrollView>
   );
