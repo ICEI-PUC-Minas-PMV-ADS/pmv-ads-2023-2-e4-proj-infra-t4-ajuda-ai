@@ -19,7 +19,9 @@ import { queryClient } from "./services/queryClient";
 import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Perfil from "./components/perfil";
+import { LogBox } from "react-native";
 
+LogBox.ignoreAllLogs(true);
 const Drawer = createDrawerNavigator();
 
 export default function Page() {
