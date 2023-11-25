@@ -12,6 +12,7 @@ const MinhasInformacoes = ({ setPage, setIsLogged }) => {
   const [login, setLogin] = useState({});
   const toggleExcluirContaModal = () => setExcluirContaModal((state) => !state);
   const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState();
 
   const checkLogin = async () => {
     const loginInfo = await AsyncStorage.getItem("@login");
@@ -23,6 +24,37 @@ const MinhasInformacoes = ({ setPage, setIsLogged }) => {
   useEffect(() => {
     checkLogin();
   }, []);
+
+  const handleSubmit = async () => {
+    setLoading(true);
+    const formData = {
+      nome: form.nome || login.response.nome,
+      dataDeNascimento:
+        form.dataDeNascimento || login.response.dataDeNascimento,
+      telefone: form.telefone || login.response.telefone,
+      email: form.email || login.response.email,
+      senha: form.senha || login.response.senha,
+      cpf: form.documento || login.response.cpf,
+      foto: "https://img.freepik.com/fotos-gratis/jovem-afro-americano-bonito-com-camiseta-caqui_176420-32042.jpg",
+    };
+
+    try {
+      await axios.put(
+        `https://ajuda-ai-backend.onrender.com/api/usuario/${login.response._id}`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      setLoading(false);
+    } catch (error) {
+      console.error("Erro:", error);
+      setLoading(false);
+    }
+  };
 
   const onConfirmExcluirConta = async () => {
     setLoading(true);
@@ -43,47 +75,91 @@ const MinhasInformacoes = ({ setPage, setIsLogged }) => {
 
   return (
     <ScrollView>
-      <View style={styles.container}>
-        <View style={styles.containerForm}>
-          <TextInput mode="outlined" theme={theme} label="Nome" />
-          <TextInput mode="outlined" theme={theme} label="Documento" />
-          <TextInput mode="outlined" theme={theme} label="Telefone" />
-          <TextInput mode="outlined" theme={theme} label="Data de nascimento" />
-          <TextInput mode="outlined" theme={theme} label="Profissão" />
-          <TextInput
-            mode="outlined"
-            theme={theme}
-            label="Email"
-            keyboardType="email-address"
-          />
-          <TextInput
-            mode="outlined"
-            theme={theme}
-            label="Descrição"
-            multiline
-          />
-          <TextInput
-            mode="outlined"
-            theme={theme}
-            secureTextEntry={true}
-            label="Senha"
-            type="password"
-          />
-          <Button mode="contained" theme={theme}>
-            Salvar
-          </Button>
+      {login.response && (
+        <View style={styles.container}>
+          <View style={styles.containerForm}>
+            <TextInput
+              mode="outlined"
+              theme={theme}
+              label="Nome"
+              defaultValue={login.response.nome}
+              onChangeText={(nome) => {
+                setForm((state) => ({ ...state, nome }));
+              }}
+            />
+            <TextInput
+              mode="outlined"
+              theme={theme}
+              label="Documento"
+              defaultValue={login.response.cpf}
+              onChangeText={(documento) => {
+                setForm((state) => ({ ...state, documento }));
+              }}
+            />
+            <TextInput
+              mode="outlined"
+              theme={theme}
+              label="Telefone"
+              defaultValue={login.response.telefone}
+              onChangeText={(telefone) => {
+                setForm((state) => ({ ...state, telefone }));
+              }}
+            />
+            <TextInput
+              mode="outlined"
+              theme={theme}
+              label="Data de nascimento"
+              defaultValue={login.response.dataDeNascimento
+                ?.slice(0, 10)
+                .split("-")
+                .reverse()
+                .join("/")}
+              onChangeText={(dataDeNascimento) => {
+                setForm((state) => ({ ...state, dataDeNascimento }));
+              }}
+            />
+            <TextInput
+              mode="outlined"
+              theme={theme}
+              label="Email"
+              keyboardType="email-address"
+              defaultValue={login.response.email}
+              onChangeText={(email) => {
+                setForm((state) => ({ ...state, email }));
+              }}
+            />
+            <TextInput
+              mode="outlined"
+              theme={theme}
+              secureTextEntry={true}
+              label="Senha"
+              type="password"
+              defaultValue={login.response.senha}
+              onChangeText={(senha) => {
+                setForm((state) => ({ ...state, senha }));
+              }}
+            />
+            <Button
+              mode="contained"
+              theme={theme}
+              onPress={handleSubmit}
+              loading={loading}
+            >
+              Salvar
+            </Button>
+          </View>
+          <View style={styles.deleteButtonContainer}>
+            <Button
+              buttonColor={DefaultTheme.colors.errorContainer}
+              textColor={DefaultTheme.colors.error}
+              mode="contained"
+              onPress={toggleExcluirContaModal}
+            >
+              Excluir conta
+            </Button>
+          </View>
         </View>
-        <View style={styles.deleteButtonContainer}>
-          <Button
-            buttonColor={DefaultTheme.colors.errorContainer}
-            textColor={DefaultTheme.colors.error}
-            mode="contained"
-            onPress={toggleExcluirContaModal}
-          >
-            Excluir conta
-          </Button>
-        </View>
-      </View>
+      )}
       <Modal
         open={excluirContaModal}
         handleClose={toggleExcluirContaModal}

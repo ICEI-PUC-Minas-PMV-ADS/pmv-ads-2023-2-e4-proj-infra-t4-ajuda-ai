@@ -1,16 +1,29 @@
 import axios from "axios";
 import { Text, View, StyleSheet } from "react-native";
 import { useEffect, useState } from "react";
-import { ProgressBar, Icon, TextInput, Button } from "react-native-paper";
+import {
+  ProgressBar,
+  Icon,
+  TextInput,
+  Button,
+  IconButton,
+} from "react-native-paper";
 import { useQuery } from "react-query";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { theme } from "../theme";
 import { ScrollView } from "react-native-gesture-handler";
+import Modal from "./modal";
 
 const Perfil = ({ route }) => {
   const [login, setLogin] = useState({});
   const [comentario, setComentario] = useState("");
   const [loading, setLoading] = useState(false);
+  const [loadingExcluirComentario, setLoadingExcluirComentario] =
+    useState(false);
+  const [excluirCometarioModal, setExcluirComentarioModal] = useState(false);
+  const [comentarioId, setComentarioId] = useState();
+  const toggleExcluirComentarioModal = () =>
+    setExcluirComentarioModal((state) => !state);
 
   const checkLogin = async () => {
     const loginInfo = await AsyncStorage.getItem("@login");
@@ -23,11 +36,7 @@ const Perfil = ({ route }) => {
     checkLogin();
   }, []);
 
-  const {
-    data: buscaAutonomo,
-    isFetching: isFetchingBuscaAutonomo,
-    IsError: IsErrorBuscaAutonomo,
-  } = useQuery(
+  const { data: buscaAutonomo, isFetching: isFetchingBuscaAutonomo } = useQuery(
     "buscaAutonomo",
     async () => {
       const response = axios.get(
@@ -86,6 +95,27 @@ const Perfil = ({ route }) => {
     } catch (error) {
       setLoading(false);
       console.error("Erro:", error);
+    }
+  };
+
+  const onExcluirComentario = async () => {
+    setLoadingExcluirComentario(true);
+    console.log("aqui");
+    try {
+      await axios.delete(
+        `https://ajuda-ai-backend.onrender.com/api/comentario/${comentarioId}`,
+        {
+          headers: {
+            Authorization: login.token,
+          },
+        }
+      );
+      toggleExcluirComentarioModal();
+      setLoadingExcluirComentario(false);
+      refetchListagemComentarios();
+    } catch (error) {
+      console.error("Erro:", error);
+      setLoadingExcluirComentario(false);
     }
   };
 
@@ -149,17 +179,36 @@ const Perfil = ({ route }) => {
                   style={{
                     padding: 10,
                     margin: 4,
-
                     backgroundColor: theme.colors.background,
                     borderRadius: 2,
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    alignItems: "center",
                   }}
                 >
                   <Text>{item.descricao}</Text>
+                  <IconButton
+                    icon="trash-can-outline"
+                    size={15}
+                    iconColor={theme.colors.primary}
+                    style={{ margin: 0 }}
+                    onPress={() => {
+                      setComentarioId(item._id);
+                      toggleExcluirComentarioModal();
+                    }}
+                  />
                 </View>
               ))
           )}
         </View>
       )}
+      <Modal
+        open={excluirCometarioModal}
+        handleClose={toggleExcluirComentarioModal}
+        title="Tem certeza que deseja excluir esse comentário?"
+        onConfirm={onExcluirComentario}
+        loading={loadingExcluirComentario}
+      />
     </ScrollView>
   );
 };
