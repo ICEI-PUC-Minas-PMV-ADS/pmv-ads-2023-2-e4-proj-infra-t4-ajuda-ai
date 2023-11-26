@@ -14,6 +14,7 @@ const loginController = {
 
         if(!validarEmail(dadosLogin.email)){
           res.status(404).json(`Email ${dadosLogin.email} não é valído`);
+          return
         }
 
         if(dadosLogin.perfil == "usuario"){
@@ -37,6 +38,7 @@ const loginController = {
         }
       } catch (error) {
         console.log(error);
+        res.status(500).json(`Email não é valído`);
       }
     }
 };

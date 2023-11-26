@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { CheckBox, View, StyleSheet, Text, Alert } from "react-native";
 import { Button, TextInput, Icon } from "react-native-paper";
 import { theme } from "../theme";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -8,6 +8,7 @@ import axios from "axios";
 const Login = ({ setPage, setIsLogged }) => {
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({});
+  const [isSelected, setSelection] = useState(false);
 
   const isEmailValid = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -25,7 +26,7 @@ const Login = ({ setPage, setIsLogged }) => {
         const response = await axios.post(
           "https://ajuda-ai-backend.onrender.com/api/login-perfil",
           {
-            perfil: "usuario",
+            perfil: isSelected ? 'autonomo' : 'usuario',
             email: form.email,
             senha: form.password,
           },
@@ -42,6 +43,14 @@ const Login = ({ setPage, setIsLogged }) => {
       } catch (error) {
         setLoading(false);
         console.error("Erro:", error);
+        Alert.alert('Erro', 'Erro de login', [
+          {
+            text: 'Cancelar',
+            onPress: () => console.log('Cancelar'),
+            style: 'cancel',
+          },
+          {text: 'OK', onPress: () => console.log('OK ')},
+        ]);
       }
     }
   };
@@ -70,6 +79,15 @@ const Login = ({ setPage, setIsLogged }) => {
           setForm((state) => ({ ...state, password }));
         }}
       />
+      <div style={ { display: "flex", gap: "10px" } }>     
+        <CheckBox
+          value={isSelected}
+          onValueChange={setSelection}
+          style={styles.checkbox}
+        />  
+        <Text style={styles.label}>Você é Autonômo?</Text> 
+        {isSelected ? '👍' : '👎'}
+      </div>
 
       <View style={styles.containerSubTitle}>
         <Button
