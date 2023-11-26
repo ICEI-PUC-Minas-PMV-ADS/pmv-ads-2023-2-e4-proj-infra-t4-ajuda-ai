@@ -39,3 +39,10 @@
 
 ![Alt text](img/autonom.png)
 ![Alt text](img/pont.png)
+
+##### Os resultados obtidos nos testes de Software da quarta etapa estão descritos a seguir:
+![Validacao Login ](img/Validacao.PNG) 
+![Validacao Login ](img/ct02.PNG)
+![Validacao Login ](img/ct-03.PNG)
+![Validacao Login ](img/ct-04.PNG)
+![Validacao Login ](img/ct-05.PNG)
