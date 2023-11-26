@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CheckBox, View, StyleSheet, Text } from "react-native";
+import { CheckBox, View, StyleSheet, Text, Alert } from "react-native";
 import { Button, TextInput, Icon } from "react-native-paper";
 import { theme } from "../theme";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -43,6 +43,14 @@ const Login = ({ setPage, setIsLogged }) => {
       } catch (error) {
         setLoading(false);
         console.error("Erro:", error);
+        Alert.alert('Erro', 'Erro de login', [
+          {
+            text: 'Cancelar',
+            onPress: () => console.log('Cancelar'),
+            style: 'cancel',
+          },
+          {text: 'OK', onPress: () => console.log('OK ')},
+        ]);
       }
     }
   };
