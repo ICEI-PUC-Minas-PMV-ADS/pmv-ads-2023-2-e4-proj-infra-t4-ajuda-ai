@@ -26,7 +26,8 @@ const Login = ({ setPage, setIsLogged }) => {
         const response = await axios.post(
           "https://ajuda-ai-backend.onrender.com/api/login-perfil",
           {
-            perfil: isSelected ? 'autonomo' : 'usuario',
+            // perfil: isSelected ? 'autonomo' : 'usuario',
+            perfil: 'usuario',
             email: form.email,
             senha: form.password,
           },
