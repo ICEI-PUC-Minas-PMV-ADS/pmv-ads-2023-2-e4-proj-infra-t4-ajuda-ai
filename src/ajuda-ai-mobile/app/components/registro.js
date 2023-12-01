@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, ToastAndroid } from "react-native";
 import { Button, TextInput, Icon } from "react-native-paper";
 import { theme } from "../theme";
 import axios from "axios";
@@ -27,9 +27,16 @@ const Registro = ({ setPage, setIsLogged }) => {
     setLoading(true);
 
     if (!form.name || !form.email || !form.password) {
-      alert("Preencha todos os campos");
+      setLoading(false);  
+      ToastAndroid.showWithGravityAndOffset(
+        'Preencha todos os campos',
+        ToastAndroid.LONG,
+        ToastAndroid.BOTTOM,25,50,);
     } else if (!isEmailValid(form.email)) {
-      alert("Preencha um email válido");
+      ToastAndroid.showWithGravityAndOffset(
+        'Preencha um email válido',
+        ToastAndroid.LONG,
+        ToastAndroid.BOTTOM,25,50,);
     } else {
       try {
         await axios.post(

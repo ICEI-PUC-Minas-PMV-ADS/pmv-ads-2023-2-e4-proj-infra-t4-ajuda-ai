@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, StyleSheet, Text, Alert } from "react-native";
+import { View, StyleSheet, Text, Alert,ToastAndroid } from "react-native";
 import { Button, TextInput, Icon } from "react-native-paper";
 import { theme } from "../theme";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -18,9 +18,17 @@ const Login = ({ setPage, setIsLogged }) => {
     setLoading(true);
 
     if (!form.email || !form.password) {
-      alert("Preencha todos os campos");
+      setLoading(false);  
+      ToastAndroid.showWithGravityAndOffset(
+        'Preencha todos os campos',
+        ToastAndroid.LONG,
+        ToastAndroid.BOTTOM,25,50,);        
     } else if (!isEmailValid(form.email)) {
-      alert("Email inválido");
+      setLoading(false);
+      ToastAndroid.showWithGravityAndOffset(
+        'Email inválido',
+        ToastAndroid.LONG,
+        ToastAndroid.BOTTOM,25,50,);
     } else {
       try {
         const response = await axios.post(
@@ -44,14 +52,10 @@ const Login = ({ setPage, setIsLogged }) => {
       } catch (error) {
         setLoading(false);
         console.error("Erro:", error);
-        Alert.alert('Erro', 'Erro de login', [
-          {
-            text: 'Cancelar',
-            onPress: () => console.log('Cancelar'),
-            style: 'cancel',
-          },
-          {text: 'OK', onPress: () => console.log('OK ')},
-        ]);
+        ToastAndroid.showWithGravityAndOffset(
+          'Erro de login',
+          ToastAndroid.LONG,
+          ToastAndroid.BOTTOM,25,50,);
       }
     }
   };
