@@ -1,0 +1,20 @@
+message: Please cite this software using these metadata.
+title: Ajuda Aí!
+authors:
+  - family-names: Vinicius Marinho Ferreira
+    given-names: Marcus   
+  - family-names: Eufrasio Cacholi
+    given-names: Amanda 
+  - family-names: Fernando Ribeiro Ferreira
+    given-names: Luiz   
+  - family-names: Douglas dos Santos
+    given-names: Patrick 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Alves de Oliveira
+    given-names: Pedro  
+keywords:
+  - Ajuda Aí!
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-ajuda-ai.git
+version: 1.0.0
+date-released: 2023-12-10
